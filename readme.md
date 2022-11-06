@@ -27,5 +27,3 @@ Get support
 List of changes
 License
 ```
-### LOG
-- [x] Penambahan SQL :tada:
