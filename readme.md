@@ -28,4 +28,4 @@ List of changes
 License
 ```
 ### LOG
-06-11-2022 Penambahan SQL
+- [x] Penambahan SQL :tada:
