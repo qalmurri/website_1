@@ -28,4 +28,4 @@ List of changes
 License
 ```
 ### LOG
-- [x] Penambahan SQL :tada:
+- [ ] Penambahan SQL :tada:
