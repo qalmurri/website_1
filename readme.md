@@ -1,5 +1,5 @@
 # Struktur Website CRUD & Multiuser PHP
-## XAMPP
+### XAMPP
 ###### Database server
 ```
 Server: 127.0.0.1 via TCP/IP
@@ -27,7 +27,7 @@ Get support
 List of changes
 License
 ```
-## SQL
+### SQL
 1. `com_data:` Sebagai penyimpan data CRUD
 2. `com_info:` Teks website; head, title, deskripsi, segala hal seperti profil website
 3. `com_log:` Segala aktifitas akan disimpan
