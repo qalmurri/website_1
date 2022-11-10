@@ -13,7 +13,7 @@ $db_log = 'com_log';
 $db_user = 'com_user';
 
 try {
-	$dbinfo = new PDO("mysql:host=$host;dbname=$db_category", $user, $pass);
+	$dbcategory = new PDO("mysql:host=$host;dbname=$db_category", $user, $pass);
 } catch (PDOException $e) {
 	echo 'Kategori Gagal ' . $e->getMessage();
 }
@@ -31,7 +31,7 @@ try {
 }
 
 try {
-	$dbuser = new PDO("mysql:host=$host;dbname=$db_log", $user, $pass);
+	$dblog = new PDO("mysql:host=$host;dbname=$db_log", $user, $pass);
 } catch (PDOException $e) {
 	echo 'Log Gagal ' . $e->getMessage();
 }
@@ -43,4 +43,3 @@ try {
 }
 
 $view = '../src/function/view.php';
-$web = 'src/function/view.php';
