@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2022 at 07:45 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Nov 11, 2022 at 01:00 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,6 +36,13 @@ CREATE TABLE `login` (
   `id_section` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id_login`, `username`, `password`, `id_member`, `id_setting`, `id_section`) VALUES
+(1, 'admin', '123', 2, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -46,9 +53,16 @@ CREATE TABLE `member` (
   `id_member` int(11) NOT NULL,
   `name_member` varchar(220) NOT NULL,
   `image_member` int(11) DEFAULT NULL,
-  `description_member` int(11) DEFAULT NULL,
+  `description_member` varchar(220) DEFAULT NULL,
   `id_part` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`id_member`, `name_member`, `image_member`, `description_member`, `id_part`) VALUES
+(2, 'Qodri', NULL, 'Saya disini sebagai Admin', 1);
 
 -- --------------------------------------------------------
 
@@ -92,9 +106,9 @@ CREATE TABLE `section` (
 --
 
 INSERT INTO `section` (`id_section`, `name_section`) VALUES
-(1, 'Company'),
-(2, 'Apprenticeship'),
-(3, 'Bookstore');
+(1, 'company'),
+(2, 'apprenticeship'),
+(3, 'bookstore');
 
 -- --------------------------------------------------------
 
@@ -103,8 +117,18 @@ INSERT INTO `section` (`id_section`, `name_section`) VALUES
 --
 
 CREATE TABLE `setting` (
-  `id_setting` int(11) NOT NULL
+  `id_setting` int(11) NOT NULL,
+  `header` int(11) NOT NULL,
+  `home` int(11) NOT NULL,
+  `footer` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `setting`
+--
+
+INSERT INTO `setting` (`id_setting`, `header`, `home`, `footer`) VALUES
+(1, 11, 11, 11);
 
 --
 -- Indexes for dumped tables
@@ -148,13 +172,13 @@ ALTER TABLE `setting`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `part`
@@ -172,7 +196,7 @@ ALTER TABLE `section`
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `id_setting` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_setting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
