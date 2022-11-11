@@ -5,23 +5,13 @@ require('../../src/config/database.php');
 if (!empty($_SESSION['id_member'])) {
     $id = $_GET['id'];
 
-    $section = "SELECT *
+    $process = "SELECT *
 FROM login
 where id_member=$id";
-    $query = $dbuser->prepare($section);
+    $query = $dbuser->prepare($process);
     $query->execute();
-    $sections = $query->fetch(PDO::FETCH_ASSOC);
-    $_SESSION['id_section'] = $sections['id_section'];
-
-    $id_section = $sections['id_section'];
-
-    $sql = "SELECT name_section
-FROM section
-where id_section=$id_section";
-    $query2 = $dbuser->prepare($sql);
-    $query2->execute();
-    $value = $query2->fetch(PDO::FETCH_ASSOC);
-    $_SESSION['name_section'] = $value['name_section'];
+    $section = $query->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['id_section'] = $section['id_section'];
 
     echo '<script>window.location="../../src/function/check_setting.php?id=' . $id . '"</script>';
 } else {

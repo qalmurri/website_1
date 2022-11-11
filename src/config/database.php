@@ -43,3 +43,4 @@ try {
 }
 
 $view = '../src/function/view.php';
+$web = 'src/function/view.php';

@@ -11,6 +11,7 @@ session_start();
 </head>
 
 <ul>
+    <li><a href="index.php">Home</a></li>
     <li><a href="?page=faq">faq</a></li>
     <li><a href="?page=info">info</a></li>
     <li><a href="?page=statistics">statistics</a></li>
