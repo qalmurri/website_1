@@ -2,7 +2,7 @@
 session_start();
 require('../../src/config/database.php');
 
-if (!empty($_SESSION['name_section'])) {
+if (!empty($_SESSION['id_section'] && $_SESSION['name_section'])) {
     $id = $_GET['id'];
 
     $section = "SELECT *

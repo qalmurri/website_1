@@ -1,5 +1,4 @@
 <?php
-session_start();
 require('src/config/database.php'); //require
 
 if (!empty($_SESSION['id_member'])) {

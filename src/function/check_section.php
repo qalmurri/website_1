@@ -11,6 +11,8 @@ where id_member=$id";
     $query = $dbuser->prepare($section);
     $query->execute();
     $sections = $query->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['id_section'] = $sections['id_section'];
+
     $id_section = $sections['id_section'];
 
     $sql = "SELECT name_section

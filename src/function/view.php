@@ -6,11 +6,11 @@
         $this->db = $db;
     }
 
-    function section($id)
+    function setting($id)
     {
-        $sql = "SELECT name_section
-		FROM section
-		where id_section=?";
+        $sql = "SELECT *
+		FROM setting
+		where id_setting=?";
         $row = $this->db->prepare($sql);
         $row->execute(array($id));
         $query = $row->fetch();

@@ -1,14 +1,22 @@
 <?php
+@ob_start();
 session_start();
 
-echo $_SESSION['id_member'];
-echo $_SESSION['name_section'];
-echo $_SESSION['id_setting'];
-?>
+require '../src/config/database.php';
+include $view;
 
-<ul>
-    <li><a href="?page=faq">faq</a></li>
-    <li><a href="?page=info">info</a></li>
-    <li><a href="?page=statistics">statistics</a></li>
-    <li><a href="../logout.php">logout</a></li>
-</ul>
+$id = $_SESSION['id_setting'];
+$see = new view($dbuser);
+$setting = $see->setting($id);
+
+if ($_SESSION['name_section'] == "company") {
+    $header = $setting['header'];
+    include "../src/include/header/$header.php";
+
+    echo $_SESSION['id_member'];
+    echo $_SESSION['id_section'];
+    echo $_SESSION['name_section'];
+    echo $_SESSION['id_setting'];
+} else {
+    echo '<script>window.location="../index.php";</script>';
+}
