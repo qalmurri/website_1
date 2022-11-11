@@ -1,1 +1,1 @@
-Statistic Page Login
+Statistic Admin

@@ -42,5 +42,5 @@ try {
 	echo 'User Gagal ' . $e->getMessage();
 }
 
-$view = '../src/function/view.php';
+$dashboad = '../src/function/view.php';
 $web = 'src/function/view.php';

@@ -1,1 +1,1 @@
-Info Page
+Info Web

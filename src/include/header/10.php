@@ -12,14 +12,8 @@ session_start();
 
 <ul>
     <li><a href="index.php">Home</a></li>
-    <li><a href="?page=faq">Faq</a></li>
-    <li><a href="?page=info">Info</a></li>
-    <li><a href="?page=statistics">Statistics</a></li>
-    <?php
-    if (!empty($_SESSION['id_member'])) {
-        echo '<li><a href="' . $_SESSION['name_section'] . '">Sudah Login</a></li>';
-    } else {
-        echo '<li><a href="?page=login">Login</a></li>';
-    }
-    ?>
+    <li><a href="?page=faq">faq</a></li>
+    <li><a href="?page=info">info</a></li>
+    <li><a href="?page=statistics">statistics</a></li>
+    <li><a href="../logout.php">logout</a></li>
 </ul>

@@ -1,1 +1,1 @@
-Statistic Page
+Statistic Web
