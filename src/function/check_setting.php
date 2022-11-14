@@ -13,7 +13,7 @@ where id_member=$id";
     $setting = $query->fetch(PDO::FETCH_ASSOC);
     $_SESSION['id_setting'] = $setting['id_setting'];
 
-    $id_section = $_SESSION['id_section'];
+    $id_section = $setting['id_setting'];
 
     $process2 = "SELECT name_section
 FROM section

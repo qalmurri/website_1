@@ -25,3 +25,10 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #333;
+    color: white;
+}

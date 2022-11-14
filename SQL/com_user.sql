@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2022 at 01:00 PM
+-- Generation Time: Nov 14, 2022 at 01:41 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -41,7 +41,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id_login`, `username`, `password`, `id_member`, `id_setting`, `id_section`) VALUES
-(1, 'admin', '123', 2, 1, 1);
+(1, 'admin', '123', 2, 1, 1),
+(2, 'admin2', '123', 3, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id_member`, `name_member`, `image_member`, `description_member`, `id_part`) VALUES
-(2, 'Qodri', NULL, 'Saya disini sebagai Admin', 1);
+(2, 'Qodri', NULL, 'Saya disini sebagai Admin', 2),
+(3, 'Ana', NULL, '', 2);
 
 -- --------------------------------------------------------
 
@@ -128,7 +130,8 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`id_setting`, `header`, `home`, `footer`) VALUES
-(1, 11, 11, 11);
+(1, 10, 10, 10),
+(2, 10, 10, 10);
 
 --
 -- Indexes for dumped tables
@@ -172,13 +175,13 @@ ALTER TABLE `setting`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `part`
@@ -196,7 +199,7 @@ ALTER TABLE `section`
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `id_setting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_setting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
