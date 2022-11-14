@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 01:41 AM
+-- Generation Time: Nov 14, 2022 at 06:41 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -63,8 +63,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id_member`, `name_member`, `image_member`, `description_member`, `id_part`) VALUES
-(2, 'Qodri', NULL, 'Saya disini sebagai Admin', 2),
-(3, 'Ana', NULL, '', 2);
+(2, 'Bambang', NULL, 'Saya disini sebagai Admin', 3),
+(3, 'Wigati', NULL, '', 3);
 
 -- --------------------------------------------------------
 
