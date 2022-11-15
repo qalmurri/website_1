@@ -25,7 +25,7 @@ section::after {
 @media (max-width: 600px) {
 
     details,
-    show_detail {
+    .show_detail {
         width: 100%;
         height: auto;
     }

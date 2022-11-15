@@ -32,3 +32,62 @@ footer {
     background-color: #333;
     color: white;
 }
+
+/* */
+
+abbr {
+    text-decoration: none;
+}
+
+.grid-main {
+    display: grid;
+    grid-auto-flow: dense;
+    /* Jarak antar kolom*/
+    grid-gap: 8pt;
+    /* Lebar kolom*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 15pt;
+}
+
+.grid-content {
+    background-color: #dcdcdc;
+    border: 1px solid #b6b6b6;
+    border-radius: 3px;
+    padding: 4pt;
+}
+
+.grid-content h1 {
+    margin: 0;
+    font-size: medium;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.grid-content img {
+    width: 100%;
+}
+
+.grid-content hr {
+    margin: 1pt;
+}
+
+.grid-content synopsis {
+    font-size: medium;
+}
+
+.info-content {
+    width: auto;
+    display: flow-root;
+    font-size: x-small;
+}
+
+.info-content author {
+    float: left;
+    font-style: italic;
+}
+
+.info-content date {
+    float: right;
+    font-style: italic;
+}
