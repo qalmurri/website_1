@@ -45,7 +45,7 @@ abbr {
     /* Jarak antar kolom*/
     grid-gap: 8pt;
     /* Lebar kolom*/
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     padding: 15pt;
 }
 
@@ -58,36 +58,23 @@ abbr {
 
 .grid-content h1 {
     margin: 0;
-    font-size: medium;
+    font-size: small;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.grid-content img {
-    width: 100%;
-}
-
 .grid-content hr {
-    margin: 1pt;
+    margin-top: 4pt;
+    margin-bottom: 0pt;
 }
 
-.grid-content synopsis {
-    font-size: medium;
+.grid-content img {
+    width: 80pt;
 }
 
-.info-content {
-    width: auto;
-    display: flow-root;
-    font-size: x-small;
-}
-
-.info-content author {
-    float: left;
-    font-style: italic;
-}
-
-.info-content date {
-    float: right;
-    font-style: italic;
+.grid-content table,
+td {
+    vertical-align: top;
+    padding: 1pt;
 }

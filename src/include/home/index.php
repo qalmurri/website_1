@@ -1,13 +1,19 @@
 <body>
     <section class="grid-main">
         <div class="grid-content">
-            <h1><abbr title="Teknik praktis pengecatan imunohistokimia untuk penelitian dan aplikasi klinis"><a href="www.google.com">Teknik praktis pengecatan imunohistokimia untuk penelitian dan aplikasi klinis</a></abbr></h1>
-            <div class="info-content">
-                <author><abbr title="Author"><a href="www.google.com">Bambang Darwiro</a></abbr></author>
-                <date><abbr title="Date"><a>1 Januari 2022</a></abbr></date>
-            </div>
+            <h1><abbr title="Teknik Praktis Pengecatan Imunohistokimia Untuk Penelitian dan Aplikasi Klinis"><a href="www.google.com">Teknik Praktis Pengecatan Imunohistokimia Untuk Penelitian dan Aplikasi Klinis</a></abbr></h1>
             <hr>
-            <img src="book.jpg" title="Teknik praktis pengecatan imunohistokimia untuk penelitian dan aplikasi klinis" alt="Teknik praktis pengecatan imunohistokimia untuk penelitian dan aplikasi klinis">
+            <table>
+                <tr>
+                    <td><img src="book.jpg" title="Teknik Praktis Pengecatan Imunohistokimia Untuk Penelitian dan Aplikasi Klinis" alt="Teknik Praktis Pengecatan Imunohistokimia Untuk Penelitian dan Aplikasi Klinis"></td>
+                    <td>
+                        <div class="info-content">
+                            Author & Publisher
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
+        <!-- FIX -->
     </section>
 </body>
