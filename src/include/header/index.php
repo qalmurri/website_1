@@ -10,7 +10,7 @@
 
 <ul>
     <li><a href="index.php">Home</a></li>
-    <li><a href="?page=faq">Faq</a></li>
+    <li><a href="?page=books">Books</a></li>
     <li><a href="?page=info">Info</a></li>
     <li><a href="?page=statistics">Statistics</a></li>
     <?php if (!empty($_SESSION['id_section'])) {

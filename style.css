@@ -62,19 +62,56 @@ abbr {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-bottom: 3pt;
 }
 
-.grid-content hr {
-    margin-top: 4pt;
-    margin-bottom: 0pt;
+.grid-content a,
+.grid-content a:link {
+    text-decoration: none;
+    color: black;
+
 }
 
 .grid-content img {
     width: 80pt;
+    padding-right: inherit;
+    float: left;
+    box-shadow: -8px 8px 10px 1px #aaa;
 }
 
-.grid-content table,
-td {
-    vertical-align: top;
-    padding: 1pt;
+.super {
+    vertical-align: super;
+    font-size: xx-small
+}
+
+.date {
+    margin: 0pt;
+    float: right;
+    font-size: small;
+}
+
+.author {
+    margin: 0pt;
+    font-size: small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.publisher {
+    margin: 0pt;
+    font-size: small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.isbn {
+    margin: 0pt;
+    font-size: small;
+}
+
+.pages {
+    margin: 0pt;
+    font-size: small;
 }
