@@ -35,10 +35,6 @@ footer {
 
 /* */
 
-abbr {
-    text-decoration: none;
-}
-
 .grid-main {
     display: grid;
     grid-auto-flow: dense;
@@ -77,68 +73,9 @@ abbr {
 
 }
 
-.grid-content img {
-    width: 80pt;
-    float: left;
-    box-shadow: -8px 8px 10px 1px #aaa;
-    padding-right: 2pt;
-}
-
-.grid-content b {
-    color: rgb(22, 84, 104);
-}
-
 .super {
     vertical-align: super;
     font-size: xx-small
-}
-
-.date {
-    margin: 0pt;
-    float: right;
-    font-size: x-small;
-}
-
-.author {
-    margin: 0pt;
-    font-size: x-small;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.publisher {
-    margin: 0pt;
-    font-size: small;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.isbn {
-    margin: 0pt;
-    font-size: small;
-}
-
-.pages {
-    margin: 0pt;
-    font-size: small;
-}
-
-
-.size {
-    margin: 0pt;
-    font-size: small;
-}
-
-.gsm {
-    margin: 0pt;
-    font-size: small;
-}
-
-.price {
-    margin: 0pt;
-    font-size: small;
 }
 
 .synopsis {
@@ -149,8 +86,4 @@ abbr {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
-
-.info-content {
-    height: 120pt;
 }
