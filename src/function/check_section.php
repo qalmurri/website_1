@@ -17,6 +17,12 @@ if (empty($_SESSION['token_login'])) {
         $token2 = $section2['token_login'];
 
         if ($_SESSION['token_login'] == $token2) {
+            $last_login = $_GET['date'];
+
+            $update = "UPDATE login SET last_login=$last_login WHERE login.id_member=$id;";
+            $query2 = $dbuser->prepare($update);
+            $query2->execute();
+
             $process = "SELECT *
 FROM login
 where id_member=$id";

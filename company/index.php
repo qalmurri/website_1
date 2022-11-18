@@ -69,7 +69,7 @@ where id_member=$id_member";
                 echo '<script>window.location="../logout.php";</script>';
             }
         } else {
-            echo '<script>window.location="../index.php";</script>';
+            echo '<script>alert("??");window.location="../index.php";</script>';
         }
     } else {
         session_destroy();

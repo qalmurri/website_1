@@ -28,7 +28,9 @@ if (!empty($_SESSION['token_login'])) {
                 $query2->execute();
                 $_SESSION['token_login'] = $token_login;
 
-                echo '<script>window.location="src/function/check_section.php?id=' . $_SESSION['id_member'] . '"</script>';
+                $today = "2";
+
+                echo '<script>window.location="src/function/check_section.php?id=' . $_SESSION['id_member'] . '&date=' . $today . '"</script>';
             } else {
                 $error = "User dan Pass gak ada";
             }
