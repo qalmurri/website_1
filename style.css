@@ -79,11 +79,44 @@ footer {
 }
 
 .synopsis {
-    margin: 0pt;
-    font-size: small;
     text-align: justify;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.specification p {
+    margin: 0pt;
+    font-size: small;
+}
+
+.info-content {
+    width: 100%;
+}
+
+.thumbnail,
+.specification {
+    vertical-align: top;
+}
+
+.thumbnail img {
+    width: 80pt;
+}
+
+.info {
+    font-size: x-small;
+    display: flow-root;
+}
+
+.info p {
+    margin: 0pt;
+}
+
+.date {
+    float: right;
+}
+
+.author {
+    float: left;
 }
