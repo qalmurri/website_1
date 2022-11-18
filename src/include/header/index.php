@@ -14,7 +14,7 @@
     <li><a href="?page=info">Info</a></li>
     <li><a href="?page=statistics">Statistics</a></li>
     <?php if (!empty($_SESSION['id_section'])) {
-        echo '<li><a href="' . $name_section['name_section'] . '">Sudah Login</a></li>'; // web/index.php
+        echo '<li><a href="' . $name_section['name_section'] . '/">Sudah Login</a></li>'; //localhost/index.php
     } else {
         echo '<li><a href="?page=login">Login</a></li>';
     } ?>

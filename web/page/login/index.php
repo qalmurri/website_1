@@ -2,7 +2,7 @@
 require('src/config/database.php'); //require
 
 if (!empty($_SESSION['token_login'])) {
-    echo '<script>window.location="index.php"</script>';
+    echo '<script>window.location="' . $name_section['name_section'] . '"</script>'; //localhost/index.php
 } else {
     if (isset($_POST['login'])) {
         $username = $_POST['u'];

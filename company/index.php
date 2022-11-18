@@ -22,6 +22,7 @@ where id_member=$id_member";
 
         $member = $user->member($id_member);
         $setting = $user->setting($id_setting);
+        $name_section = $user->section($id_section);
 
         $header = $setting['header'];
         $home = $setting['home'];
@@ -71,8 +72,9 @@ where id_member=$id_member";
             echo '<script>window.location="../index.php";</script>';
         }
     } else {
-        echo '<script>alert("Token Berubah");window.location="../logout.php";</script>';
+        session_destroy();
+        echo '<script>alert("Token Berubah");window.location="../index.php";</script>'; //localhost/index.php
     }
 } else {
-    echo '<script>alert("Gak ada Token");window.location="../logout.php";</script>';
+    echo '<script>alert("Gak ada Token");window.location="../index.php";</script>';
 }
