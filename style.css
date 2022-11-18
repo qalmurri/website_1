@@ -102,6 +102,14 @@ footer {
 
 .thumbnail img {
     width: 80pt;
+    border-radius: 3px;
+
+}
+
+.thumbnail p {
+    margin: 0pt;
+    text-align: center;
+    font-size: xx-small;
 }
 
 .info {
@@ -119,4 +127,16 @@ footer {
 
 .author {
     float: left;
+}
+
+.change-spec td {
+    vertical-align: top;
+    padding: 0pt;
+}
+
+.change-spec td p {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
