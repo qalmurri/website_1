@@ -2,10 +2,19 @@
 session_start();
 require('../../src/config/database.php');
 
-if ($_SESSION['token'] == "1") {
-    if (!empty($_SESSION['id_section'])) {
-        $id = $_GET['id'];
+if (!empty($_SESSION['id_section'])) {
+    $id = $_GET['id'];
+    $id2 = $_SESSION['id_member'];
 
+    $token = "SELECT *
+    FROM login
+    where id_member=$id2";
+    $query2 = $dbuser->prepare($token);
+    $query2->execute();
+    $section2 = $query2->fetch(PDO::FETCH_ASSOC);
+    $token2 = $section2['token_login'];
+
+    if ($_SESSION['token_login'] == $token2) {
         $process = "SELECT *
 FROM login
 where id_member=$id";
@@ -25,8 +34,8 @@ where id_section=$id_section";
 
         echo '<script>alert("Login Sukses");window.location="../../' . $section['name_section'] . '/index.php"</script>';
     } else {
-        echo '<script>alert("Gak ada ID Section");window.location="../../index.php"</script>';
+        echo '<script>alert("Gak ada Token");window.location="../../logout.php";</script>';
     }
 } else {
-    echo '<script>alert("Gak ada Token");window.location="../../logout.php";</script>';
+    echo '<script>alert("Gak ada ID Section");window.location="../../index.php"</script>';
 }
