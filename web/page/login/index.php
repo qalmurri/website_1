@@ -1,12 +1,12 @@
 <?php
 require('src/config/database.php'); //require
 
-if (!empty($_SESSION['id_member'])) {
-    echo '<script>window.location="' . $_SESSION['name_section'] . '/"</script>';
+if (!empty($_SESSION['token_login'])) {
+    echo '<script>window.location="index.php"</script>';
 } else {
     if (isset($_POST['login'])) {
-        $username = $_POST['user'];
-        $password = $_POST['pass'];
+        $username = $_POST['u'];
+        $password = $_POST['p'];
         if (empty($username) && empty($password)) {
             $error = 'Isi data dulu bro';
         } else {
@@ -21,12 +21,12 @@ if (!empty($_SESSION['id_member'])) {
             if ($query->rowCount() > 0) {
                 $_SESSION['id_member'] = $session['id_member'];
                 $id_login = $session['id_login'];
-                $token = time();
+                $token_login = time();
 
-                $update = "UPDATE login SET token_login=$token WHERE login.id_login=$id_login;";
+                $update = "UPDATE login SET token_login=$token_login WHERE login.id_login=$id_login;";
                 $query2 = $dbuser->prepare($update);
                 $query2->execute();
-                $_SESSION['token_login'] = $token;
+                $_SESSION['token_login'] = $token_login;
 
                 echo '<script>window.location="src/function/check_section.php?id=' . $_SESSION['id_member'] . '"</script>';
             } else {
@@ -37,8 +37,8 @@ if (!empty($_SESSION['id_member'])) {
 ?>
     <form method="POST">
         <table>
-            <input type="text" name="user" placeholder="Username" />
-            <input type="password" name="pass" placeholder="Password" />
+            <input type="text" name="u" placeholder="Username" />
+            <input type="password" name="p" placeholder="Password" />
             <input type="submit" name="login" />
         </table>
     </form>
