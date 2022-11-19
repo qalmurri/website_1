@@ -1,10 +1,10 @@
 <footer>
     <address>
-        Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
-        Visit us at:<br>
-        Example.com<br>
-        Box 564, Disneyland<br>
-        USA
+        == SESSION ==</br>
+        ID Member : <?php echo $_SESSION['id_member'] ?></br>
+        ID Section : <?php echo $_SESSION['id_section'] ?></br>
+        ID Setting : <?php echo $_SESSION['id_setting'] ?></br>
+        Token Login : <?php echo $_SESSION['token_login'] ?></br></br>
     </address>
 </footer>
 

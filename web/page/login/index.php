@@ -7,34 +7,32 @@ if (!empty($_SESSION['id_setting'])) {
     if (isset($_POST['login'])) {
         $username = $_POST['u'];
         $password = $_POST['p'];
+
         if (empty($username) && empty($password)) {
             $error = 'Isi data dulu bro';
         } else {
-            $process = "SELECT *
-            FROM `login`
-            WHERE `username_login`=:username AND `password_login`=:password";
+            $process = "SELECT * FROM `login` WHERE `username_login`=:username AND `password_login`=:password";
             $query = $dbuser->prepare($process);
             $query->bindParam(':username', $username, PDO::PARAM_STR);
             $query->bindParam(':password', $password, PDO::PARAM_STR);
             $query->execute();
             $session = $query->fetch(PDO::FETCH_ASSOC);
+
             if ($query->rowCount() > 0) {
                 $_SESSION['id_member'] = $session['id_member'];
                 $id_member = $session['id_member'];
                 $id_login = $session['id_login'];
+
                 $token_login = time();
+                $_SESSION['token_login'] = $token_login;
 
                 $update = "UPDATE login SET token_login=$token_login WHERE login.id_login=$id_login;";
                 $query2 = $dbuser->prepare($update);
                 $query2->execute();
-                $_SESSION['token_login'] = $token_login;
 
-                $log = "INSERT into com_log.log (id_member, id_crud, id_action)
-                VALUES ($id_member, 1, 2) ";
+                $log = "INSERT INTO com_log.log (id_member, id_crud, id_action) VALUES ($id_member, 1, 2) ";
                 $query = $dbuser->prepare($log);
                 $query->execute();
-
-                include '../../../src/function/log/login.php';
 
                 echo '<script>window.location="src/function/check_section.php?id=' . $_SESSION['id_member'] . '"</script>';
             } else {
