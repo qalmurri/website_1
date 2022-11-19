@@ -40,7 +40,12 @@ if (!empty($_SESSION['id_setting'])) {
             }
         }
     }
+
+    if (isset($error)) {
+        echo $error;
+    }
 ?>
+
     <form method="POST">
         <table>
             <input type="text" name="u" placeholder="Username" />
@@ -48,7 +53,5 @@ if (!empty($_SESSION['id_setting'])) {
             <input type="submit" name="login" />
         </table>
     </form>
-    <?php if (isset($error)) {
-        echo $error;
-    } ?>
+
 <?php } ?>

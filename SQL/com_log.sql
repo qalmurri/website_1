@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 06:41 PM
+-- Generation Time: Nov 19, 2022 at 06:07 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -31,6 +31,15 @@ CREATE TABLE `action` (
   `id_action` int(11) NOT NULL,
   `name_action` varchar(220) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `action`
+--
+
+INSERT INTO `action` (`id_action`, `name_action`) VALUES
+(1, 'logout'),
+(2, 'login'),
+(3, 'foto profil');
 
 -- --------------------------------------------------------
 
@@ -64,9 +73,31 @@ CREATE TABLE `log` (
   `id_member` int(11) NOT NULL,
   `id_crud` int(11) NOT NULL,
   `id_action` int(11) NOT NULL,
-  `description_log` varchar(220) NOT NULL,
-  `create_log` varchar(220) DEFAULT NULL
+  `date_log` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `log`
+--
+
+INSERT INTO `log` (`id_log`, `id_member`, `id_crud`, `id_action`, `date_log`) VALUES
+(95, 2, 1, 3, '2022-11-19 11:41:58'),
+(96, 2, 3, 3, '2022-11-19 11:42:17'),
+(97, 2, 3, 3, '2022-11-19 11:43:34'),
+(98, 2, 1, 1, '2022-11-19 11:43:45'),
+(99, 2, 1, 2, '2022-11-19 11:44:10'),
+(100, 2, 1, 1, '2022-11-19 11:44:16'),
+(101, 2, 1, 2, '2022-11-19 11:46:17'),
+(102, 2, 3, 3, '2022-11-19 11:46:26'),
+(103, 2, 1, 1, '2022-11-19 11:49:22'),
+(104, 2, 1, 2, '2022-11-19 11:53:51'),
+(105, 2, 1, 1, '2022-11-19 11:56:42'),
+(106, 2, 1, 2, '2022-11-19 11:56:59'),
+(107, 2, 1, 1, '2022-11-19 12:06:27'),
+(108, 2, 1, 2, '2022-11-19 12:06:34'),
+(109, 2, 1, 1, '2022-11-19 12:06:36'),
+(110, 2, 1, 2, '2022-11-19 12:06:46'),
+(111, 2, 1, 1, '2022-11-19 12:07:04');
 
 --
 -- Indexes for dumped tables
@@ -98,7 +129,7 @@ ALTER TABLE `log`
 -- AUTO_INCREMENT for table `action`
 --
 ALTER TABLE `action`
-  MODIFY `id_action` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_action` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `crud`
@@ -110,7 +141,7 @@ ALTER TABLE `crud`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

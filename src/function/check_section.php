@@ -1,4 +1,6 @@
 <?php
+include '../function/maintance.php';
+
 session_start();
 require('../../src/config/database.php');
 

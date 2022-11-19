@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 06:41 PM
+-- Generation Time: Nov 19, 2022 at 06:07 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -29,8 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `login` (
   `id_login` int(11) NOT NULL,
-  `username` varchar(220) NOT NULL,
-  `password` varchar(220) NOT NULL,
+  `username_login` varchar(220) NOT NULL,
+  `password_login` varchar(220) NOT NULL,
+  `token_login` int(11) DEFAULT NULL,
   `id_member` int(11) NOT NULL,
   `id_setting` int(11) NOT NULL,
   `id_section` int(11) NOT NULL
@@ -40,9 +41,9 @@ CREATE TABLE `login` (
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`id_login`, `username`, `password`, `id_member`, `id_setting`, `id_section`) VALUES
-(1, 'admin', '123', 2, 1, 1),
-(2, 'admin2', '123', 3, 2, 1);
+INSERT INTO `login` (`id_login`, `username_login`, `password_login`, `token_login`, `id_member`, `id_setting`, `id_section`) VALUES
+(1, 'admin', '123', 1668834406, 2, 1, 1),
+(2, 'admin2', '123', 1668832538, 3, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -53,7 +54,7 @@ INSERT INTO `login` (`id_login`, `username`, `password`, `id_member`, `id_settin
 CREATE TABLE `member` (
   `id_member` int(11) NOT NULL,
   `name_member` varchar(220) NOT NULL,
-  `image_member` int(11) DEFAULT NULL,
+  `image_member` varchar(220) DEFAULT NULL,
   `description_member` varchar(220) DEFAULT NULL,
   `id_part` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -63,8 +64,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id_member`, `name_member`, `image_member`, `description_member`, `id_part`) VALUES
-(2, 'Bambang', NULL, 'Saya disini sebagai Admin', 3),
-(3, 'Wigati', NULL, '', 3);
+(2, 'Bambang', '2_2.jpg', 'Saya disini sebagai Admin', 3),
+(3, 'Wigati', '3_1.png', '', 3);
 
 -- --------------------------------------------------------
 
