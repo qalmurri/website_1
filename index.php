@@ -4,6 +4,7 @@ require 'src/config/database.php';
 include $web;
 
 $id_section = $_SESSION['id_section'];
+
 $user = new view($dbuser);
 $name_section = $user->section($id_section);
 
