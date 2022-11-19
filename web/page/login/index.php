@@ -1,7 +1,7 @@
 <?php
 require('src/config/database.php'); //require
 
-if (!empty($_SESSION['token_login'])) {
+if (!empty($_SESSION['id_setting'])) {
     echo '<script>window.location="' . $name_section['name_section'] . '"</script>'; //localhost/index.php
 } else {
     if (isset($_POST['login'])) {
@@ -20,6 +20,7 @@ if (!empty($_SESSION['token_login'])) {
             $session = $query->fetch(PDO::FETCH_ASSOC);
             if ($query->rowCount() > 0) {
                 $_SESSION['id_member'] = $session['id_member'];
+                $id_member = $session['id_member'];
                 $id_login = $session['id_login'];
                 $token_login = time();
 
@@ -28,9 +29,14 @@ if (!empty($_SESSION['token_login'])) {
                 $query2->execute();
                 $_SESSION['token_login'] = $token_login;
 
-                $today = "2";
+                $log = "INSERT into com_log.log (id_member, id_crud, id_action)
+                VALUES ($id_member, 1, 2) ";
+                $query = $dbuser->prepare($log);
+                $query->execute();
 
-                echo '<script>window.location="src/function/check_section.php?id=' . $_SESSION['id_member'] . '&date=' . $today . '"</script>';
+                include '../../../src/function/log/login.php';
+
+                echo '<script>window.location="src/function/check_section.php?id=' . $_SESSION['id_member'] . '"</script>';
             } else {
                 $error = "User dan Pass gak ada";
             }

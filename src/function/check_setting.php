@@ -3,7 +3,8 @@ session_start();
 require('../../src/config/database.php');
 
 if (empty($_SESSION['token_login'])) {
-    echo '<script>alert("Gak ada Token");window.location="../../index.php"</script>';
+    session_destroy();
+    echo '<script>alert("Gak ada ID Setting");window.location="../../index.php"</script>';
 } else {
     if (!empty($_SESSION['id_section'])) {
         $id = $_GET['id'];
