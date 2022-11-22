@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2022 at 06:07 AM
+-- Generation Time: Nov 22, 2022 at 02:15 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -42,8 +42,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id_login`, `username_login`, `password_login`, `token_login`, `id_member`, `id_setting`, `id_section`) VALUES
-(1, 'admin', '123', 1668834406, 2, 1, 1),
-(2, 'admin2', '123', 1668832538, 3, 2, 1);
+(1, 'admin', '123', 1669079586, 2, 1, 1),
+(2, 'admin2', '123', 1669079527, 3, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -64,8 +64,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id_member`, `name_member`, `image_member`, `description_member`, `id_part`) VALUES
-(2, 'Bambang', '2_2.jpg', 'Saya disini sebagai Admin', 3),
-(3, 'Wigati', '3_1.png', '', 3);
+(2, 'Admin', '2_1.jpg', 'Saya disini sebagai Admin', 1),
+(3, 'Wigati', '3_2.png', '', 3);
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,7 @@ CREATE TABLE `setting` (
   `id_setting` int(11) NOT NULL,
   `header` int(11) NOT NULL,
   `home` int(11) NOT NULL,
-  `footer` int(11) NOT NULL
+  `footer` varchar(220) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -131,8 +131,8 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`id_setting`, `header`, `home`, `footer`) VALUES
-(1, 10, 10, 10),
-(2, 10, 10, 10);
+(1, 11, 11, 'index'),
+(2, 13, 13, 'index');
 
 --
 -- Indexes for dumped tables
