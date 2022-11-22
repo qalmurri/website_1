@@ -3,10 +3,14 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="../../../image/icon/images.png">
+    <link rel="shortcut icon" href="src/icon/favicon.png">
     <title>Com</title>
 </head>
+
+<style>
+    <?php $url = "src/css/style.css";
+    echo minify(file_get_contents($url)); ?>
+</style>
 
 <div class="topnav" id="myTopnav">
     <a href="index.php">Home</a>
