@@ -42,6 +42,7 @@ try {
 	echo 'User Gagal ' . $e->getMessage();
 }
 
+$admin = '../../../src/function/view.php';
 $profil = '../../src/function/view.php';
 $dashboad = '../src/function/view.php';
 $web = 'src/function/view.php';

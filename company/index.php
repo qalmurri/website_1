@@ -25,7 +25,16 @@ if (!empty($_SESSION['token_login'])) {
         $footer = $setting['footer'];
 
         if ($_SESSION['id_section'] == "1") {
-            if ($member['id_part'] == "2") {
+            if ($member['id_part'] == "1") {
+                include "../src/include/header/$header.php";
+
+                if (!empty($_GET['page'])) {
+                    include 'web/page/' . $_GET['page'] . '/index.php';
+                } else {
+                    include "../src/include/home/$home.php";
+                }
+                include "../src/include/footer/$footer.php";
+            } else if ($member['id_part'] == "2") {
                 include "../src/include/header/$header.php";
 
                 if (!empty($_GET['page'])) {

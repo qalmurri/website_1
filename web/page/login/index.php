@@ -30,7 +30,7 @@ if (!empty($_SESSION['id_setting'])) {
                 $query2 = $dbuser->prepare($update);
                 $query2->execute();
 
-                $log = "INSERT INTO com_log.log (id_member, id_crud, id_action) VALUES ($id_member, 1, 2) ";
+                $log = "INSERT INTO com_log.log (id_member, id_crud, id_action, note_log) VALUES ($id_member, 1, 2, $token_login) ";
                 $query = $dbuser->prepare($log);
                 $query->execute();
 

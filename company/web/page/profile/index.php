@@ -15,6 +15,7 @@ if (isset($_POST['update_gambar'])) {
     } elseif (round($_FILES['foto']["size"] / 1024) > 4096) {
         echo '<script>alert("WARNING !!! Besar Gambar Tidak Boleh Lebih Dari 4 MB");window.location="?page=profile"</script>';
     } else {
+
         $tmp_name = $_FILES['foto']['tmp_name'];
         $dir = '../image/profil/';
         $name = $id_member . '_' . basename($_FILES['foto']['name']);
@@ -30,7 +31,7 @@ if (isset($_POST['update_gambar'])) {
             $row->execute($data);
 
             $log = "INSERT into com_log.log (id_member, id_crud, id_action)
-            VALUES ($id_member, 3, 3) ";
+            VALUES ($id_member, 3, 3)";
             $query_log = $dbuser->prepare($log);
             $query_log->execute();
 
