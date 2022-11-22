@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="../src/icon/favicon.png">
-        <title>Com</title>
+        <title>Company</title>
     </head>
 
     <style>

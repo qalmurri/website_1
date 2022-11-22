@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/icon/favicon.png">
-    <title>Com</title>
-</head>
+<?php
+$query4 = $user->web();
+foreach ($query4 as $meta) { ?>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="<?php echo $meta['description_meta'] ?>">
+        <meta name="keywords" content="<?php echo $meta['keywords_meta'] ?>">
+        <meta name="author" content="<?php echo $meta['author_meta'] ?>">
+        <meta name="viewport" content="<?php echo $meta['viewport_meta'] ?>">
+        <link rel="shortcut icon" href="src/icon/favicon.png">
+        <title>Website</title>
+    </head>
+<?php } ?>
 
 <style>
     <?php $url = "src/css/style.css";
