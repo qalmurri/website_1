@@ -2,13 +2,24 @@
     <html>
 
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="../../../image/icon/images.png">
         <title>Com</title>
     </head>
 
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="?page=books">Books</a></li>
-        <li><a href="?page=profile">Profile</a></li>
-        <li><a href="logout/">logout</a></li>
-    </ul>
+    <div class="topnav" id="myTopnav">
+        <a href="index.php">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Books
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="?page=create">??</a>
+                <a href="?page=update">??</a>
+            </div>
+        </div>
+        <a href="?page=profile">Profile</a>
+        <a href="logout/">Logout</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>

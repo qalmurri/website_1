@@ -4,18 +4,24 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="book.jpg">
+    <link rel="shortcut icon" href="../../../image/icon/images.png">
     <title>Com</title>
 </head>
 
-<ul>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="?page=books">Books</a></li>
-    <li><a href="?page=info">Info</a></li>
-    <li><a href="?page=statistics">Statistics</a></li>
+<div class="topnav" id="myTopnav">
+    <a href="index.php">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Book
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="?page=books">Books</a>
+        </div>
+    </div>
     <?php if (!empty($_SESSION['id_section'])) {
-        echo '<li><a href="' . $name_section['name_section'] . '/">Sudah Login</a></li>'; //localhost/index.php
+        echo '<a href="' . $name_section['name_section'] . '/">Sudah Login</a>'; //localhost/index.php
     } else {
-        echo '<li><a href="?page=login">Login</a></li>';
+        echo '<a href="?page=login">Login</a>';
     } ?>
-</ul>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>

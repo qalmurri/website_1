@@ -10,7 +10,7 @@
             <table class="info-content">
                 <tr>
                     <td class="thumbnail">
-                        <img id="imageOne" src="book.jpg" title="Klik untuk cover lain" alt="Teknik Praktis Pengecatan Imunohistokimia Untuk Penelitian dan Aplikasi Klinis" onclick="changeCover()">
+                        <img id="imageOne" src="../image/cover/book.jpg" title="Klik untuk cover lain" alt="Teknik Praktis Pengecatan Imunohistokimia Untuk Penelitian dan Aplikasi Klinis" onclick="changeCover()">
                         <p>Desainer 1</p>
                     </td>
                     <td class="specification">
