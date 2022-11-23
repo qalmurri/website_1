@@ -20,10 +20,11 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="?page=create">Create</a>
-                <a href="?page=read">Read</a>
-                <a href="?page=update">Update</a>
-                <a href="?page=delete">Delete</a>
+                <a href="?page=crud">All</a>
+                <a href="?page=crud/create">Create</a>
+                <a href="?page=crud/read">Read</a>
+                <a href="?page=crud/update">Update</a>
+                <a href="?page=crud/delete">Delete</a>
             </div>
         </div>
         <div class="dropdown">

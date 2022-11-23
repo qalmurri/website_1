@@ -48,6 +48,17 @@
         return $query;
     }
 
+    function crud_log()
+    {
+        $sql = "SELECT * FROM com_log.log 
+        INNER JOIN com_user.member ON com_log.log.id_member = com_user.member.id_member
+        ORDER BY com_log.log.id_log DESC";
+        $row = $this->db->prepare($sql);
+        $row->execute();
+        $query = $row->fetchAll();
+        return $query;
+    }
+
     function create_log()
     {
         $sql = "SELECT * FROM com_log.log 
