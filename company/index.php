@@ -1,9 +1,8 @@
 <?php
-include '../src/function/sanitize_output.php';
-ob_start("sanitize_output");
-
-session_start();
 include '../src/function/minify.php';
+ob_start("sanitize_output");
+session_start();
+
 require '../src/config/database.php';
 
 if (!empty($_SESSION['token_login'])) {
