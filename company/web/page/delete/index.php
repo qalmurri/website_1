@@ -22,4 +22,6 @@
             <?php } ?>
         </table>
     </body>
-<?php } ?>
+<?php } else {
+    include '../src/function/notfoundpage.php';
+} ?>
