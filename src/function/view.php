@@ -25,6 +25,17 @@
         return $query;
     }
 
+    function books_dashboard($id_books)
+    {
+        $sql = "SELECT *
+		FROM books
+		where id_books=?";
+        $row = $this->db->prepare($sql);
+        $row->execute(array($id_books));
+        $query = $row->fetch();
+        return $query;
+    }
+
     function section($id_section)
     {
         $sql = "SELECT *

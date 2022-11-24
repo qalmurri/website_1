@@ -1,6 +1,6 @@
 <?php if ($member['id_part'] == "3") {
     include '../src/config/database.php';
-    
+
     if (isset($_POST['tambah'])) {
         $order_books = $_POST['order_books'];
         $title_books = $_POST['title_books'];
@@ -10,10 +10,15 @@
 
         $sql9 = 'INSERT INTO completeness (file_completeness, editor_completeness, photo_completeness, foreword_completeness, cvbio_completeness, toc_completeness, synopsis_completeness, bibliografi_completeness)
     VALUES (0, 0, 0, 0, 0, 0, 0, 0);
-    SET @last_id=LAST_INSERT_ID();
-    
-INSERT INTO books (order_books, title_books, id_completeness)
-VALUES (?, ?, @last_id)';
+    SET @id_completeness=LAST_INSERT_ID();
+
+    INSERT INTO cover (front_cover, back_cover)
+    VALUES (0, 0);
+    SET @id_cover=LAST_INSERT_ID();
+
+    INSERT INTO books (order_books, title_books, id_completeness, id_cover)
+    VALUES (?, ?, @id_completeness, @id_cover)';
+
         $row9 = $dbdata->prepare($sql9);
         $row9->execute($data);
 
