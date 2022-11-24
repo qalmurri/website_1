@@ -15,6 +15,16 @@
         return $query;
     }
 
+    function books_web()
+    {
+        $sql = "SELECT * FROM com_data.books 
+        ORDER BY com_data.books.id_books DESC";
+        $row = $this->db->prepare($sql);
+        $row->execute();
+        $query = $row->fetchAll();
+        return $query;
+    }
+
     function section($id_section)
     {
         $sql = "SELECT *
@@ -112,6 +122,16 @@
         $sql = "SELECT * FROM com_user.member 
         INNER JOIN com_user.part ON com_user.member.id_part = com_user.part.id_part
         ORDER BY com_user.member.id_member DESC";
+        $row = $this->db->prepare($sql);
+        $row->execute();
+        $query = $row->fetchAll();
+        return $query;
+    }
+
+    function order()
+    {
+        $sql = "SELECT * FROM com_data.books 
+        ORDER BY com_data.books.id_books DESC";
         $row = $this->db->prepare($sql);
         $row->execute();
         $query = $row->fetchAll();
