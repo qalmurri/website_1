@@ -27,9 +27,10 @@
 
     function books_dashboard($id_books)
     {
-        $sql = "SELECT *
-		FROM books
-		where id_books=?";
+        $sql = "SELECT * FROM com_data.books
+        INNER JOIN com_data.completeness ON com_data.books.id_completeness = com_data.completeness.id_completeness
+        INNER JOIN com_data.cover ON com_data.books.id_cover = com_data.cover.id_cover
+		WHERE com_data.books.id_books=?";
         $row = $this->db->prepare($sql);
         $row->execute(array($id_books));
         $query = $row->fetch();
