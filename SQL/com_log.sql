@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2022 at 01:06 AM
+-- Generation Time: Nov 24, 2022 at 05:02 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -105,7 +105,16 @@ INSERT INTO `log` (`id_log`, `id_member`, `id_crud`, `id_action`, `note_log`, `d
 (246, 3, 1, 4, 'Malang Selatan', '2022-11-24 06:14:55'),
 (247, 3, 1, 3, '1669245910', '2022-11-24 06:25:10'),
 (248, 3, 1, 4, 'Dengan Ini Saya Menyatakan Bahwa Website Sepenuhnya mengalami kenaikan', '2022-11-24 06:25:39'),
-(249, 3, 1, 4, 'Bunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBung', '2022-11-24 06:56:55');
+(249, 3, 1, 4, 'Bunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBung', '2022-11-24 06:56:55'),
+(250, 2, 1, 3, '1669282545', '2022-11-24 16:35:45'),
+(251, 2, 1, 3, '1669282545', '2022-11-24 16:37:44'),
+(252, 3, 1, 3, '1669282669', '2022-11-24 16:37:49'),
+(253, 3, 1, 4, 'dengan demikian', '2022-11-24 17:08:45'),
+(254, 3, 1, 4, 'Bunga Rampai', '2022-11-24 17:30:58'),
+(255, 3, 1, 4, 'Desa Wisata', '2022-11-24 17:31:22'),
+(256, 3, 1, 4, 'Test bisa gak', '2022-11-24 17:32:34'),
+(257, 3, 1, 3, '1669304350', '2022-11-24 22:39:10'),
+(258, 3, 1, 4, 'Bunga Rampai', '2022-11-24 22:56:05');
 
 --
 -- Indexes for dumped tables
@@ -149,7 +158,7 @@ ALTER TABLE `crud`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250;
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

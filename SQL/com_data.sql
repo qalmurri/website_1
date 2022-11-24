@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2022 at 01:06 AM
+-- Generation Time: Nov 24, 2022 at 05:02 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -31,21 +31,16 @@ CREATE TABLE `books` (
   `id_books` int(11) NOT NULL,
   `order_books` int(11) NOT NULL,
   `title_books` varchar(220) NOT NULL,
-  `id_completeness` int(11) NOT NULL
+  `id_completeness` int(11) NOT NULL,
+  `id_cover` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `books`
 --
 
-INSERT INTO `books` (`id_books`, `order_books`, `title_books`, `id_completeness`) VALUES
-(44, 1, 'Bunga Rampai', 44),
-(45, 2, 'Bunga Rampai ke 2', 45),
-(46, 1, '123', 46),
-(47, 1, '123', 47),
-(48, 12, 'Malang Selatan', 48),
-(49, 1, 'Dengan Ini Saya Menyatakan Bahwa Website Sepenuhnya mengalami kenaikan', 49),
-(50, 1, 'Bunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBung', 50);
+INSERT INTO `books` (`id_books`, `order_books`, `title_books`, `id_completeness`, `id_cover`) VALUES
+(55, 1, 'Bunga Rampai', 55, 2);
 
 -- --------------------------------------------------------
 
@@ -70,13 +65,26 @@ CREATE TABLE `completeness` (
 --
 
 INSERT INTO `completeness` (`id_completeness`, `file_completeness`, `editor_completeness`, `photo_completeness`, `foreword_completeness`, `cvbio_completeness`, `toc_completeness`, `synopsis_completeness`, `bibliografi_completeness`) VALUES
-(44, 0, 0, 0, 0, 0, 0, 0, 0),
-(45, 0, 0, 0, 0, 0, 0, 0, 0),
-(46, 0, 0, 0, 0, 0, 0, 0, 0),
-(47, 0, 0, 0, 0, 0, 0, 0, 0),
-(48, 0, 0, 0, 0, 0, 0, 0, 0),
-(49, 0, 0, 0, 0, 0, 0, 0, 0),
-(50, 0, 0, 0, 0, 0, 0, 0, 0);
+(55, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cover`
+--
+
+CREATE TABLE `cover` (
+  `id_cover` int(11) NOT NULL,
+  `front_cover` varchar(220) NOT NULL,
+  `back_cover` varchar(220) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cover`
+--
+
+INSERT INTO `cover` (`id_cover`, `front_cover`, `back_cover`) VALUES
+(2, '0', '0');
 
 --
 -- Indexes for dumped tables
@@ -95,6 +103,12 @@ ALTER TABLE `completeness`
   ADD PRIMARY KEY (`id_completeness`);
 
 --
+-- Indexes for table `cover`
+--
+ALTER TABLE `cover`
+  ADD PRIMARY KEY (`id_cover`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -102,13 +116,19 @@ ALTER TABLE `completeness`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id_books` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_books` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `completeness`
 --
 ALTER TABLE `completeness`
-  MODIFY `id_completeness` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_completeness` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
+--
+-- AUTO_INCREMENT for table `cover`
+--
+ALTER TABLE `cover`
+  MODIFY `id_cover` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
