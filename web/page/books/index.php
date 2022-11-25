@@ -18,6 +18,7 @@
                             <hr>
                         <div id="select"></div>
                         <hr>
+                        <label for="id_buku">Change</label>
                         <select id="id_buku" onchange="spec()">
                             <option value="<?php include "index/spec1.php"; ?>">ISBN</option>
                             <option value="<?php include "index/spec2.php"; ?>">EBOOK</option>
@@ -64,6 +65,7 @@
                                 <hr>
                             <div id="se<?php echo $book['id_books']; ?>"></div>
                             <hr>
+                            <label for="<?php echo $book['id_books']; ?>">Change</label>
                             <select id="<?php echo $book['id_books']; ?>" onchange="s<?php echo $book['id_books']; ?>()">
                                 <option value="<?php include "index/spec1.php"; ?>">ISBN</option>
                                 <option value="<?php include "index/spec2.php"; ?>">EBOOK</option>
