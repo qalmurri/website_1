@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Nov 25, 2022 at 02:09 AM
+=======
+-- Generation Time: Nov 24, 2022 at 05:02 PM
+>>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -42,7 +46,11 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id_login`, `username_login`, `password_login`, `token_login`, `id_member`, `id_setting`, `id_section`) VALUES
+<<<<<<< HEAD
 (1, 'admin', '123', 1669338422, 2, 1, 1),
+=======
+(1, 'admin', '123', 1669282545, 2, 1, 1),
+>>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
 (2, 'admin2', '123', 1669304350, 3, 2, 1);
 
 -- --------------------------------------------------------

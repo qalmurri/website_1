@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Nov 25, 2022 at 02:09 AM
+=======
+-- Generation Time: Nov 24, 2022 at 05:02 PM
+>>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -114,8 +118,12 @@ INSERT INTO `log` (`id_log`, `id_member`, `id_crud`, `id_action`, `note_log`, `d
 (255, 3, 1, 4, 'Desa Wisata', '2022-11-24 17:31:22'),
 (256, 3, 1, 4, 'Test bisa gak', '2022-11-24 17:32:34'),
 (257, 3, 1, 3, '1669304350', '2022-11-24 22:39:10'),
+<<<<<<< HEAD
 (258, 3, 1, 4, 'Bunga Rampai', '2022-11-24 22:56:05'),
 (259, 2, 1, 3, '1669338422', '2022-11-25 08:07:02');
+=======
+(258, 3, 1, 4, 'Bunga Rampai', '2022-11-24 22:56:05');
+>>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
 
 --
 -- Indexes for dumped tables
@@ -159,7 +167,11 @@ ALTER TABLE `crud`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
+<<<<<<< HEAD
   MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=260;
+=======
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
+>>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
