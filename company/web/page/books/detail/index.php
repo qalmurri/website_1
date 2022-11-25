@@ -6,6 +6,10 @@ $book = $books_dashboard->books_dashboard($id_books); ?>
 
 <?php echo $book['id_books'] ?><br>
 <?php echo $book['title_books'] ?><br>
+<?php echo $book['price_books'] ?><br>
+<?php echo $book['total_books'] ?><br>
+<?php echo $book['amount_books'] ?><br>
+<?php echo $book['estimation_books'] ?><br>
 
 <?php echo $book['file_completeness'] ?><br>
 <?php echo $book['editor_completeness'] ?><br>

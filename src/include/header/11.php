@@ -14,7 +14,17 @@
 
     <div class="topnav" id="myTopnav">
         <a href="index.php">Home</a>
-        <a href="?page=member">Member</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Member
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="?page=member">All</a>
+                <a href="?page=member/author">author</a>
+            </div>
+        </div>
+
         <div class="dropdown">
             <button class="dropbtn">CRUD
                 <i class="fa fa-caret-down"></i>

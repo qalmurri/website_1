@@ -30,10 +30,13 @@ if (isset($_POST['update_gambar'])) {
             $row = $dbuser->prepare($sql);
             $row->execute($data);
 
-            $log = "INSERT into com_log.log (id_member, id_crud, id_action)
-            VALUES ($id_member, 3, 3)";
+
+            $data2[] = $name;
+
+            $log = "INSERT into com_log.log (id_member, id_crud, id_action, note_log)
+            VALUES ($id_member, 3, 3, ?)";
             $query_log = $dbuser->prepare($log);
-            $query_log->execute();
+            $query_log->execute($data2);
 
             echo '<script>alert("Upload Berhasil");window.location="?page=profile"</script>';
         } else {

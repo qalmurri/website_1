@@ -140,6 +140,18 @@
         return $query;
     }
 
+    function author_log()
+    {
+        $sql = "SELECT * FROM com_user.member 
+        INNER JOIN com_user.part ON com_user.member.id_part = com_user.part.id_part
+        WHERE com_user.member.id_part=5
+        ORDER BY com_user.member.id_member DESC";
+        $row = $this->db->prepare($sql);
+        $row->execute();
+        $query = $row->fetchAll();
+        return $query;
+    }
+
     function order()
     {
         $sql = "SELECT * FROM com_data.books 
