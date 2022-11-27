@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Nov 25, 2022 at 02:09 AM
-=======
--- Generation Time: Nov 24, 2022 at 05:02 PM
->>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
+-- Generation Time: Nov 27, 2022 at 12:16 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -44,7 +40,8 @@ INSERT INTO `action` (`id_action`, `name_action`) VALUES
 (1, 'logout'),
 (2, 'login'),
 (3, 'foto profil'),
-(4, 'buat kk');
+(4, 'buat kk'),
+(5, 'tambah penulis');
 
 -- --------------------------------------------------------
 
@@ -78,6 +75,7 @@ CREATE TABLE `log` (
   `id_member` int(11) NOT NULL,
   `id_crud` int(11) NOT NULL,
   `id_action` int(11) NOT NULL,
+  `id_target` int(11) DEFAULT NULL,
   `note_log` varchar(220) NOT NULL,
   `date_log` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -86,44 +84,41 @@ CREATE TABLE `log` (
 -- Dumping data for table `log`
 --
 
-INSERT INTO `log` (`id_log`, `id_member`, `id_crud`, `id_action`, `note_log`, `date_log`) VALUES
-(227, 3, 1, 4, 'Bunga Rampai', '2022-11-23 21:06:48'),
-(228, 3, 1, 1, '1669205234', '2022-11-23 21:08:29'),
-(229, 2, 1, 2, '1669212525', '2022-11-23 21:08:45'),
-(230, 2, 1, 1, '1669212525', '2022-11-23 21:08:50'),
-(231, 3, 1, 2, '1669212536', '2022-11-23 21:08:56'),
-(232, 3, 1, 4, 'Bunga Rampai ke 2', '2022-11-23 21:09:02'),
-(233, 3, 1, 4, '123', '2022-11-23 21:12:34'),
-(234, 3, 1, 4, '123', '2022-11-23 21:12:44'),
-(235, 3, 1, 1, '1669212536', '2022-11-23 21:17:46'),
-(236, 2, 1, 2, '1669213071', '2022-11-23 21:17:51'),
-(237, 2, 3, 3, '', '2022-11-23 21:19:07'),
-(238, 2, 3, 3, '', '2022-11-23 21:26:32'),
-(239, 2, 1, 1, '1669213071', '2022-11-23 22:36:43'),
-(240, 3, 1, 2, '1669217809', '2022-11-23 22:36:49'),
-(241, 3, 1, 1, '1669217809', '2022-11-23 22:36:55'),
-(242, 2, 1, 2, '1669217819', '2022-11-23 22:36:59'),
-(243, 2, 1, 2, '1669244691', '2022-11-24 06:04:51'),
-(244, 2, 1, 3, '1669244691', '2022-11-24 06:07:31'),
-(245, 3, 1, 3, '1669244858', '2022-11-24 06:07:38'),
-(246, 3, 1, 4, 'Malang Selatan', '2022-11-24 06:14:55'),
-(247, 3, 1, 3, '1669245910', '2022-11-24 06:25:10'),
-(248, 3, 1, 4, 'Dengan Ini Saya Menyatakan Bahwa Website Sepenuhnya mengalami kenaikan', '2022-11-24 06:25:39'),
-(249, 3, 1, 4, 'Bunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBunga RampaiBung', '2022-11-24 06:56:55'),
-(250, 2, 1, 3, '1669282545', '2022-11-24 16:35:45'),
-(251, 2, 1, 3, '1669282545', '2022-11-24 16:37:44'),
-(252, 3, 1, 3, '1669282669', '2022-11-24 16:37:49'),
-(253, 3, 1, 4, 'dengan demikian', '2022-11-24 17:08:45'),
-(254, 3, 1, 4, 'Bunga Rampai', '2022-11-24 17:30:58'),
-(255, 3, 1, 4, 'Desa Wisata', '2022-11-24 17:31:22'),
-(256, 3, 1, 4, 'Test bisa gak', '2022-11-24 17:32:34'),
-(257, 3, 1, 3, '1669304350', '2022-11-24 22:39:10'),
-<<<<<<< HEAD
-(258, 3, 1, 4, 'Bunga Rampai', '2022-11-24 22:56:05'),
-(259, 2, 1, 3, '1669338422', '2022-11-25 08:07:02');
-=======
-(258, 3, 1, 4, 'Bunga Rampai', '2022-11-24 22:56:05');
->>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
+INSERT INTO `log` (`id_log`, `id_member`, `id_crud`, `id_action`, `id_target`, `note_log`, `date_log`) VALUES
+(326, 3, 1, 4, 85, 'Bunga Rampai', '2022-11-26 09:06:00'),
+(327, 3, 1, 5, 15, 'Pak Baru', '2022-11-26 09:06:05'),
+(328, 3, 1, 3, NULL, '1669491910', '2022-11-27 02:45:10'),
+(329, 3, 1, 4, 86, 'Hukum Rimba', '2022-11-27 02:46:01'),
+(330, 3, 1, 4, 87, 'Perjuangan Sesaat', '2022-11-27 02:46:25'),
+(331, 3, 1, 3, NULL, '1669491910', '2022-11-27 02:56:48'),
+(332, 3, 1, 3, NULL, '1669492651', '2022-11-27 02:57:31'),
+(333, 3, 1, 3, NULL, '1669492651', '2022-11-27 02:59:17'),
+(334, 2, 1, 3, NULL, '1669492766', '2022-11-27 02:59:26'),
+(335, 2, 1, 3, NULL, '1669492766', '2022-11-27 03:00:44'),
+(336, 3, 1, 3, NULL, '1669492850', '2022-11-27 03:00:50'),
+(337, 3, 1, 3, NULL, '1669492850', '2022-11-27 03:02:51'),
+(338, 3, 1, 3, NULL, '1669492998', '2022-11-27 03:03:18'),
+(339, 3, 1, 3, NULL, '1669520057', '2022-11-27 10:34:17'),
+(340, 3, 1, 5, 16, 'Pak Sarjono', '2022-11-27 10:41:10'),
+(341, 3, 1, 5, 17, 'pak lek', '2022-11-27 10:41:14'),
+(342, 3, 1, 5, 18, 'pak kintil', '2022-11-27 10:41:31'),
+(343, 3, 1, 5, 19, '123123', '2022-11-27 10:41:35'),
+(344, 3, 1, 5, 20, 'Pak Sarjono', '2022-11-27 10:41:37'),
+(345, 3, 1, 5, 21, 'pak sarjono', '2022-11-27 10:41:42'),
+(346, 3, 1, 5, 22, 'a', '2022-11-27 10:41:52'),
+(347, 3, 1, 5, 23, 'b', '2022-11-27 10:41:56'),
+(348, 3, 1, 5, 24, 'c', '2022-11-27 10:41:59'),
+(349, 3, 1, 5, 25, 'e', '2022-11-27 10:42:02'),
+(350, 3, 1, 5, 26, 'd', '2022-11-27 10:42:04'),
+(351, 3, 1, 4, 88, 'Halusinasi', '2022-11-27 14:53:39'),
+(352, 3, 1, 4, 89, 'Bunga Rampai', '2022-11-27 14:57:45'),
+(353, 3, 1, 4, 90, 'Bunga Rampai', '2022-11-27 14:58:32'),
+(354, 3, 1, 4, 91, 'Bunga Rampai6', '2022-11-27 15:01:27'),
+(355, 3, 1, 4, 92, 'Bunga Rampai7', '2022-11-27 15:01:36'),
+(356, 3, 1, 4, 93, 'Bunga Rampai', '2022-11-27 15:02:01'),
+(357, 3, 1, 4, 94, 'Bunga Rampai2', '2022-11-27 15:02:20'),
+(358, 3, 1, 4, 95, 'Bunga Rampai3', '2022-11-27 15:02:28'),
+(359, 3, 1, 3, NULL, '1669520057', '2022-11-27 15:09:06');
 
 --
 -- Indexes for dumped tables
@@ -155,7 +150,7 @@ ALTER TABLE `log`
 -- AUTO_INCREMENT for table `action`
 --
 ALTER TABLE `action`
-  MODIFY `id_action` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_action` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `crud`
@@ -167,11 +162,7 @@ ALTER TABLE `crud`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-<<<<<<< HEAD
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=260;
-=======
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
->>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=360;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

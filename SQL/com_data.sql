@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Nov 25, 2022 at 02:09 AM
-=======
--- Generation Time: Nov 24, 2022 at 05:02 PM
->>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
+-- Generation Time: Nov 27, 2022 at 12:16 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -35,16 +31,23 @@ CREATE TABLE `books` (
   `id_books` int(11) NOT NULL,
   `order_books` int(11) NOT NULL,
   `title_books` varchar(220) NOT NULL,
+  `price_books` int(11) DEFAULT NULL,
+  `total_books` int(11) DEFAULT NULL,
+  `amount_books` int(11) DEFAULT NULL,
+  `estimation_books` date DEFAULT NULL,
   `id_completeness` int(11) NOT NULL,
-  `id_cover` int(11) NOT NULL
+  `id_cover` int(11) NOT NULL,
+  `show_books` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `books`
 --
 
-INSERT INTO `books` (`id_books`, `order_books`, `title_books`, `id_completeness`, `id_cover`) VALUES
-(55, 1, 'Bunga Rampai', 55, 2);
+INSERT INTO `books` (`id_books`, `order_books`, `title_books`, `price_books`, `total_books`, `amount_books`, `estimation_books`, `id_completeness`, `id_cover`, `show_books`) VALUES
+(91, 1, 'Bunga Rampai', 0, 0, 0, '0000-00-00', 93, 40, 0),
+(92, 2, 'Bunga Rampai2', 0, 0, 0, '0000-00-00', 94, 41, 1),
+(93, 3, 'Bunga Rampai3', 0, 0, 0, '0000-00-00', 95, 42, 0);
 
 -- --------------------------------------------------------
 
@@ -69,7 +72,17 @@ CREATE TABLE `completeness` (
 --
 
 INSERT INTO `completeness` (`id_completeness`, `file_completeness`, `editor_completeness`, `photo_completeness`, `foreword_completeness`, `cvbio_completeness`, `toc_completeness`, `synopsis_completeness`, `bibliografi_completeness`) VALUES
-(55, 0, 0, 0, 0, 0, 0, 0, 0);
+(85, 0, 0, 0, 0, 0, 0, 0, 0),
+(86, 0, 0, 0, 0, 0, 0, 0, 0),
+(87, 0, 0, 0, 0, 0, 0, 0, 0),
+(88, 0, 0, 0, 0, 0, 0, 0, 0),
+(89, 0, 0, 0, 0, 0, 0, 0, 0),
+(90, 0, 0, 0, 0, 0, 0, 0, 0),
+(91, 0, 0, 0, 0, 0, 0, 0, 0),
+(92, 0, 0, 0, 0, 0, 0, 0, 0),
+(93, 0, 0, 0, 0, 0, 0, 0, 0),
+(94, 0, 0, 0, 0, 0, 0, 0, 0),
+(95, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -88,7 +101,17 @@ CREATE TABLE `cover` (
 --
 
 INSERT INTO `cover` (`id_cover`, `front_cover`, `back_cover`) VALUES
-(2, '0', '0');
+(32, '0', '0'),
+(33, '0', '0'),
+(34, '0', '0'),
+(35, '0', '0'),
+(36, '0', '0'),
+(37, '0', '0'),
+(38, '0', '0'),
+(39, '0', '0'),
+(40, '0', '0'),
+(41, '0', '0'),
+(42, '0', '0');
 
 --
 -- Indexes for dumped tables
@@ -120,19 +143,19 @@ ALTER TABLE `cover`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id_books` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_books` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `completeness`
 --
 ALTER TABLE `completeness`
-  MODIFY `id_completeness` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_completeness` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `cover`
 --
 ALTER TABLE `cover`
-  MODIFY `id_cover` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_cover` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Nov 25, 2022 at 02:09 AM
-=======
--- Generation Time: Nov 24, 2022 at 05:02 PM
->>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
+-- Generation Time: Nov 27, 2022 at 12:16 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -46,12 +42,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id_login`, `username_login`, `password_login`, `token_login`, `id_member`, `id_setting`, `id_section`) VALUES
-<<<<<<< HEAD
-(1, 'admin', '123', 1669338422, 2, 1, 1),
-=======
-(1, 'admin', '123', 1669282545, 2, 1, 1),
->>>>>>> d8eab171a4e8ed248fe534d706ef5059af5d9c3b
-(2, 'admin2', '123', 1669304350, 3, 2, 1);
+(1, 'admin', '123', 1669492766, 2, 1, 1),
+(2, 'admin2', '123', 1669520057, 3, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -72,8 +64,19 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id_member`, `name_member`, `image_member`, `description_member`, `id_part`) VALUES
-(2, 'Admin', '2_1.jpg', 'Saya disini sebagai Admin', 1),
-(3, 'Wigati', '3_2.png', '', 3);
+(2, 'Admin', '2_IMG_20151023_103915.jpg', 'Saya disini sebagai Admin', 1),
+(3, 'Wigati', '3_Logo Magerlur.png', '', 3),
+(16, 'Brambang', NULL, NULL, 5),
+(17, 'Tumbas', NULL, NULL, 5),
+(18, 'Kintil', NULL, NULL, 5),
+(19, 'Sontoloyo', NULL, NULL, 5),
+(20, 'Pak Sarjono', NULL, NULL, 5),
+(21, 'Pak Jidan', NULL, NULL, 5),
+(22, 'Sego Pecel', NULL, NULL, 5),
+(23, 'Goder', NULL, NULL, 5),
+(24, 'Beton', NULL, NULL, 5),
+(25, 'Asu', NULL, NULL, 5),
+(26, 'Kucing', NULL, NULL, 5);
 
 -- --------------------------------------------------------
 
@@ -95,7 +98,7 @@ INSERT INTO `part` (`id_part`, `name_part`) VALUES
 (2, 'Head'),
 (3, 'Secretariat'),
 (4, 'Designer'),
-(5, 'Booking'),
+(5, 'Author'),
 (6, 'Layouter'),
 (7, 'Writer'),
 (8, 'Apprenticeship'),
@@ -190,7 +193,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `part`
