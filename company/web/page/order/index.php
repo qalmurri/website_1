@@ -1,5 +1,4 @@
 <?php if ($member['id_part'] == "3") {
-    include '../src/config/database.php';
 
     if (isset($_POST['tambah_order'])) {
         $order_books = $_POST['order_books'];
@@ -62,9 +61,7 @@
         <input type="number" name="amount_books" placeholder="Jumlah Cetak"><br>
         <input type="date" name="estimation_books" placeholder="Perkiraan Jadi"><br>
         <input type="submit" name="tambah_order" value="tambah order" />
-    </form>
-
-    <br>
+    </form><br>
 
     <form method="POST" action="">
         <input type="text" name="author" value="" placeholder="author"><br>

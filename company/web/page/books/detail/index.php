@@ -2,7 +2,20 @@
 
 $id_books = $_GET['book'];
 $books_dashboard = new view($dbdata);
-$book = $books_dashboard->books_dashboard($id_books); ?>
+$book = $books_dashboard->books_dashboard($id_books);
+
+if (isset($_POST['edit_author'])) {
+    $id_books = $_GET['book'];
+    $id_author = $_POST['author'];
+
+    foreach ($id_author as $author) {
+        $sql = "INSERT INTO com_category.author (id_books, id_member) VALUES ($id_books, $author)";
+        $row = $dbcategory->prepare($sql);
+        $row->execute();
+    }
+
+    echo '<script>alert("Berhasil Tambah Penulis");window.location="?page=books/detail&book=' . $id_books . '"</script>';
+} ?>
 
 
 <form method="POST">
@@ -47,3 +60,28 @@ $book = $books_dashboard->books_dashboard($id_books); ?>
 
 <?php echo $book['front_cover'] ?><br>
 <?php echo $book['back_cover'] ?><br>
+
+<!-- -->
+
+<form method="POST">
+    <select name="author[]" multiple>
+        <optgroup label="Author">
+            <?php
+            $query = $user->author();
+            foreach ($query as $author) { ?>
+                <option value="<?php echo $author['id_member']; ?>"><?php echo $author['name_member']; ?></option>
+            <?php } ?>
+        </optgroup>
+    </select>
+    <input type="submit" name="edit_author" value="edit_author" />
+</form>
+<br>
+
+<?php
+$category = new view($dbcategory);
+$hasil = $category->author_book($id_books);
+foreach ($hasil as $author) { ?>
+
+    <?php echo $author['id_member'] ?> <?php echo $author['name_member'] ?> <br>
+
+<?php } ?>

@@ -63,10 +63,33 @@
     {
         $sql = "SELECT *
 		FROM member
-		where id_member=?";
+		WHERE id_member=?";
         $row = $this->db->prepare($sql);
         $row->execute(array($id_member));
         $query = $row->fetch();
+        return $query;
+    }
+
+    function author()
+    {
+        $sql = "SELECT * FROM com_user.member 
+        WHERE com_user.member.id_part=5
+        ORDER BY com_user.member.name_member ASC";
+        $row = $this->db->prepare($sql);
+        $row->execute();
+        $query = $row->fetchAll();
+        return $query;
+    }
+
+    function author_book($id_books)
+    {
+        $sql = "SELECT * FROM com_category.author
+        INNER JOIN com_user.member ON com_category.author.id_member = com_user.member.id_member
+		WHERE id_books=?
+        ORDER BY com_user.member.name_member ASC";
+        $row = $this->db->prepare($sql);
+        $row->execute(array($id_books));
+        $query = $row->fetchAll();
         return $query;
     }
 
