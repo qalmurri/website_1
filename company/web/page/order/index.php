@@ -7,6 +7,7 @@
         $total_books = $_POST['total_books'];
         $amount_books = $_POST['amount_books'];
         $estimation_books = $_POST['estimation_books'];
+        $show_books = $_POST['show_books'];
 
         $create_books[] = $order_books;
         $create_books[] = $title_books;
@@ -14,6 +15,7 @@
         $create_books[] = $total_books;
         $create_books[] = $amount_books;
         $create_books[] = $estimation_books;
+        $create_books[] = $show_books;
 
         $books_sql = 'INSERT INTO completeness (file_completeness, editor_completeness, photo_completeness, foreword_completeness, cvbio_completeness, toc_completeness, synopsis_completeness, bibliografi_completeness)
     VALUES (0, 0, 0, 0, 0, 0, 0, 0);
@@ -23,8 +25,8 @@
     VALUES (0, 0);
     SET @id_cover=LAST_INSERT_ID();
     
-    INSERT INTO books (order_books, title_books, price_books, total_books, amount_books, estimation_books, id_completeness, id_cover)
-    VALUES (?, ?,?, ?, ?, ?, @id_completeness, @id_cover)';
+    INSERT INTO books (order_books, title_books, price_books, total_books, amount_books, estimation_books, id_completeness, id_cover, show_books)
+    VALUES (?, ?,?, ?, ?, ?, @id_completeness, @id_cover, ?)';
 
         $row = $dbdata->prepare($books_sql);
         $row->execute($create_books);
@@ -60,6 +62,7 @@
         <input type="number" name="total_books" placeholder="Harga Semua"><br>
         <input type="number" name="amount_books" placeholder="Jumlah Cetak"><br>
         <input type="date" name="estimation_books" placeholder="Perkiraan Jadi"><br>
+        Tampilkan di web atau tidak?<input name="show_books" value="0" hidden><input type="checkbox" name="show_books" value="1"><br>
         <input type="submit" name="tambah_order" value="tambah order" />
     </form><br>
 

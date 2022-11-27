@@ -65,7 +65,7 @@ if (isset($_POST['edit_author'])) {
 $category = new view($dbcategory);
 $hasil = $category->author_book($id_books);
 foreach ($hasil as $author) { ?>
-    <a href="<?php echo $author['id_member'] ?>"><?php echo $author['name_member'] ?></a>
+    <a href="<?php echo $author['id_member'] ?>"><?php echo $author['name_member'] ?></a><br>
 <?php } ?>
 <!-- -->
 
