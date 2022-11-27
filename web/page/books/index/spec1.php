@@ -63,7 +63,7 @@
             <p>:</p>
         </td>
         <td>
-            <p>Rp. 150.000,00</p>
+            <p>Rp. <?php echo $book['price_books'] ?></p>
         </td>
     </tr>
 </table>

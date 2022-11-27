@@ -61,6 +61,12 @@ if (isset($_POST['edit_author'])) {
 <?php echo $book['front_cover'] ?><br>
 <?php echo $book['back_cover'] ?><br>
 
+<?php
+$category = new view($dbcategory);
+$hasil = $category->author_book($id_books);
+foreach ($hasil as $author) { ?>
+    <a href="<?php echo $author['id_member'] ?>"><?php echo $author['name_member'] ?></a>
+<?php } ?>
 <!-- -->
 
 <form method="POST">
@@ -76,12 +82,3 @@ if (isset($_POST['edit_author'])) {
     <input type="submit" name="edit_author" value="edit_author" />
 </form>
 <br>
-
-<?php
-$category = new view($dbcategory);
-$hasil = $category->author_book($id_books);
-foreach ($hasil as $author) { ?>
-
-    <?php echo $author['id_member'] ?> <?php echo $author['name_member'] ?> <br>
-
-<?php } ?>

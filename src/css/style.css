@@ -204,7 +204,10 @@ footer {
 }
 
 .author {
-    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 .change-spec td {
