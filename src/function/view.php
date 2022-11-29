@@ -61,6 +61,16 @@
         $query = $row->fetchAll();
         return $query;
     }
+    function author_count($id_member)
+    {
+        $sql = "SELECT COUNT(com_category.author.id_books)
+        FROM com_category.author
+        WHERE com_category.author.id_member=?";
+        $row = $this->db->prepare($sql);
+        $row->execute(array($id_member));
+        $query = $row->fetch();
+        return $query;
+    }
     function author_book($id_books)
     {
         $sql = "SELECT * FROM com_category.author INNER JOIN com_user.member ON com_category.author.id_member = com_user.member.id_member WHERE id_books=? ORDER BY com_user.member.name_member ASC";

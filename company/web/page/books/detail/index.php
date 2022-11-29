@@ -5,29 +5,16 @@ $books_dashboard = new view($dbdata);
 $book = $books_dashboard->books_dashboard($id_books);
 
 if (isset($_POST['edit_author'])) {
-    $id_books2 = $_GET['book'];
-    $id_author2 = $_POST['author'];
+    $id_books = $_GET['book'];
+    $id_author = $_POST['author'];
 
-    foreach ($id_author2 as $author2) {
-        $process2 = "SELECT * FROM com_category.author WHERE com_category.author.id_books=$id_books2 AND com_category.author.id_member=$author2";
-        $stmt = $dbcategory->prepare($process2);
-        $stmt->execute();
+    foreach ($id_author as $author) {
+        $sql = "INSERT INTO com_category.author (id_books, id_member) VALUES ($id_books, $author)";
+        $row = $dbcategory->prepare($sql);
+        $row->execute();
     }
 
-    if ($stmt->rowCount() > 0) {
-        echo 'Author Sudah ada';
-    } else {
-        $id_books = $_GET['book'];
-        $id_author = $_POST['author'];
-
-        foreach ($id_author as $author) {
-            $sql = "INSERT INTO com_category.author (id_books, id_member) VALUES ($id_books, $author)";
-            $row = $dbcategory->prepare($sql);
-            $row->execute();
-        }
-
-        echo '<script>alert("Berhasil Tambah Penulis");window.location="?page=books/detail&book=' . $id_books . '"</script>';
-    }
+    echo '<script>alert("Berhasil Tambah Penulis");window.location="?page=books/detail&book=' . $id_books . '"</script>';
 } ?>
 
 
@@ -87,8 +74,10 @@ foreach ($hasil as $author) { ?>
         <optgroup label="Author">
             <?php
             $query = $user->author();
-            foreach ($query as $author) { ?>
-                <option value="<?php echo $author['id_member']; ?>"><?php echo $author['name_member']; ?></option>
+            foreach ($query as $author) {
+                $count2 = $books_dashboard->author_count($author['id_member']);
+                foreach ($count2 as $author2)  ?>
+                <option value="<?php echo $author['id_member']; ?>"><?php echo $author['name_member']; ?> (<?php echo $author2 ?>)</option>
             <?php } ?>
         </optgroup>
     </select>
