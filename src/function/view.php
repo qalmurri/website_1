@@ -58,7 +58,21 @@
         /*$sql2 = "SELECT * FROM com_category.author
         WHERE com_category.author.id_books=$id_books";
         $row2 = $this->db->prepare($sql2);
-        $row2->execute(); */
+        $row2->execute();
+        
+        SELECT
+	GROUP_CONCAT(id_member) AS "ID MEMBER"
+FROM author
+WHERE id_books=97;
+
+
+SELECT
+	*
+#	GROUP_CONCAT(id_member) AS "ID MEMBER"
+FROM author
+WHERE id_books=97
+GROUP BY id_member;
+        */
 
         $sql = "SELECT *
         FROM com_user.member
