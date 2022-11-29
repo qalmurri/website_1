@@ -53,9 +53,18 @@
         $query = $row->fetch();
         return $query;
     }
-    function author()
+    function author(/*$id_books*/)
     {
-        $sql = "SELECT * FROM com_user.member WHERE com_user.member.id_part=5 ORDER BY com_user.member.name_member ASC";
+        /*$sql2 = "SELECT * FROM com_category.author
+        WHERE com_category.author.id_books=$id_books";
+        $row2 = $this->db->prepare($sql2);
+        $row2->execute(); */
+
+        $sql = "SELECT *
+        FROM com_user.member
+        WHERE com_user.member.id_part=5 
+        /*AND NOT com_user.member.id_member=row2 */
+        ORDER BY com_user.member.name_member ASC";
         $row = $this->db->prepare($sql);
         $row->execute();
         $query = $row->fetchAll();
