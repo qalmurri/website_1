@@ -53,6 +53,19 @@
         $query = $row->fetch();
         return $query;
     }
+
+    function author_web()
+    {
+        $sql = "SELECT *
+        FROM com_user.member
+        WHERE com_user.member.id_part=5 
+        ORDER BY com_user.member.name_member ASC";
+        $row = $this->db->prepare($sql);
+        $row->execute();
+        $query = $row->fetchAll();
+        return $query;
+    }
+
     function author($id_books)
     {
         $sql = "SELECT *

@@ -9,7 +9,7 @@
                         <p class="date"><?php echo $book['estimation_books']; ?></p>
                         <p class="author"><b>Author: </b> <?php
                                                             $hasil = $user->author_book($book['id_books']);
-                                                            foreach ($hasil as $author) { ?> <a href="<?php echo $author['id_member'] ?>" title="<?php echo $author['name_member'] ?>"><?php echo $author['name_member'] ?>, </a> <?php } ?> </p>
+                                                            foreach ($hasil as $author) { ?> <a href="?page=author/detail&author=<?php echo $author['id_member'] ?>" title="<?php echo $author['name_member'] ?>"><?php echo $author['name_member'] ?>, </a> <?php } ?> </p>
                     </div>
                     <h1 title="<?php echo $book['title_books']; ?>"><a class="super"><?php echo $book['order_books']; ?> </a><a href="www.google.com"><?php echo $book['title_books']; ?></a></h1>
                     <hr>

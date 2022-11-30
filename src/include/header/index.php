@@ -31,6 +31,7 @@ foreach ($query4 as $meta) { ?>
             <a href="?page=books">Books</a>
         </div>
     </div>
+    <a href="?page=author">Author</a>
     <?php if (!empty($_SESSION['id_section'])) {
         echo '<a href="' . $name_section['name_section'] . '/">Sudah Login</a>'; //localhost/index.php
     } else {

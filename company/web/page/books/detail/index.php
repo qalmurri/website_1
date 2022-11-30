@@ -15,6 +15,23 @@ if (isset($_POST['edit_author'])) {
     }
 
     echo '<script>alert("Berhasil Tambah Penulis");window.location="?page=books/detail&book=' . $id_books . '"</script>';
+}
+
+if (isset($_POST['tambah_penulis'])) {
+
+    $author = $_POST['author'];
+
+    $create_author[] = $author;
+    $author_sql = 'INSERT INTO member (name_member, id_part) VALUES (?, 5)';
+    $row = $dbuser->prepare($author_sql);
+    $row->execute($create_author);
+
+    $id_author = $dbuser->lastInsertId();
+    $author_log[] = $author;
+    $log = "INSERT INTO com_log.log (id_member, id_crud, id_action, id_target, note_log) VALUES ($id_member, 1, 5, $id_author, ?) ";
+    $query = $dblog->prepare($log);
+    $query->execute($author_log);
+    echo '<script>alert("Berhasil Tambah Penulis");window.location="?page=books/detail&book=' . $id_books . '"</script>';
 } ?>
 
 
@@ -84,3 +101,7 @@ foreach ($hasil as $author) { ?>
     <input type="submit" name="edit_author" value="edit_author" />
 </form>
 <br>
+<form method="POST" action="">
+    <input type="text" name="author" value="" placeholder="author"><br>
+    <input type="submit" name="tambah_penulis" value="tambah penulis" />
+</form>
