@@ -53,31 +53,15 @@
         $query = $row->fetch();
         return $query;
     }
-    function author(/*$id_books*/)
+    function author($id_books)
     {
-        /*$sql2 = "SELECT * FROM com_category.author
-        WHERE com_category.author.id_books=$id_books";
-        $row2 = $this->db->prepare($sql2);
-        $row2->execute();
-        
-        SELECT
-	GROUP_CONCAT(id_member) AS "ID MEMBER"
-FROM author
-WHERE id_books=97;
-
-
-SELECT
-	*
-#	GROUP_CONCAT(id_member) AS "ID MEMBER"
-FROM author
-WHERE id_books=97
-GROUP BY id_member;
-        */
-
         $sql = "SELECT *
         FROM com_user.member
         WHERE com_user.member.id_part=5 
-        /*AND NOT com_user.member.id_member=row2 */
+        AND NOT com_user.member.id_member IN (
+            SELECT id_member
+            FROM com_category.author
+            WHERE com_category.author.id_books=$id_books)
         ORDER BY com_user.member.name_member ASC";
         $row = $this->db->prepare($sql);
         $row->execute();
