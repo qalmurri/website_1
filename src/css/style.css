@@ -125,7 +125,6 @@ footer {
 }
 
 .grid-content {
-    background-color: #dcdcdc;
     border: 1px solid #b6b6b6;
     border-radius: 3px;
     padding: 4pt;
@@ -245,6 +244,7 @@ footer {
     border: 1px solid gray;
     margin: 2px;
     padding: 10px;
+    border-radius: 3px;
 }
 
 .column:first-child {
