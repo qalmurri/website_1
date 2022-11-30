@@ -73,7 +73,7 @@ foreach ($hasil as $author) { ?>
     <select name="author[]" multiple>
         <optgroup label="Author">
             <?php
-            $query = $user->author(/*$id_books*/);
+            $query = $user->author($id_books);
             foreach ($query as $author) {
                 $count2 = $books_dashboard->author_count($author['id_member']);
                 foreach ($count2 as $author2)  ?>
