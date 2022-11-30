@@ -2,6 +2,8 @@ body {
     margin: 0px;
 }
 
+
+
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -111,8 +113,7 @@ footer {
     color: white;
 }
 
-/* */
-
+/* BOOKS START */
 .grid-main {
     display: grid;
     grid-auto-flow: dense;
@@ -220,4 +221,61 @@ footer {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+/* BOOKS END */
+
+/* HOME START */
+.wrapper {
+    padding: 5px;
+    width: 96%;
+    margin: auto;
+}
+
+
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.column {
+    flex: 1;
+    border: 1px solid gray;
+    margin: 2px;
+    padding: 10px;
+}
+
+.column:first-child {
+    margin-left: 0;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+
+@media screen and (max-width: 980px) {
+    .columns .column {
+        margin-bottom: 5px;
+        flex-basis: 40%;
+    }
+
+    .columns .column:nth-last-child(2) {
+        margin-right: 0;
+    }
+
+    .columns .column:last-child {
+        flex-basis: 100%;
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    .columns .column {
+        flex-basis: 100%;
+        margin: 0 0 5px 0;
+    }
 }
