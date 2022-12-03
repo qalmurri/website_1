@@ -1,5 +1,6 @@
 <footer>
     <address>
+        <a href="http://localhost/website_1/">Home</a>
         == SESSION ==</br>
         ID Member : <?php echo $_SESSION['id_member'] ?></br>
         ID Section : <?php echo $_SESSION['id_section'] ?></br>

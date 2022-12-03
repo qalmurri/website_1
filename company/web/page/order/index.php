@@ -26,16 +26,24 @@
             $create_books[] = $estimation_books;
             $create_books[] = $show_books;
 
-            $books_sql = 'INSERT INTO completeness (file_completeness, editor_completeness, photo_completeness, foreword_completeness, cvbio_completeness, toc_completeness, synopsis_completeness, bibliografi_completeness)
-VALUES (0, 0, 0, 0, 0, 0, 0, 0);
+            $books_sql = 'INSERT INTO completeness (file_completeness, editor_completeness, photo_completeness, foreword_completeness, cvbio_completeness, toc_completeness, synopsis_completeness, text_synopsis_completeness, bibliografi_completeness)
+VALUES (0, 0, 0, 0, 0, 0, 0, 0, 0);
 SET @id_completeness=LAST_INSERT_ID();
 
 INSERT INTO cover (front_cover, back_cover)
 VALUES (0, 0);
 SET @id_cover=LAST_INSERT_ID();
 
-INSERT INTO books (order_books, title_books, price_books, total_books, amount_books, estimation_books, id_completeness, id_cover, show_books)
-VALUES (?, ?,?, ?, ?, ?, @id_completeness, @id_cover, ?)';
+INSERT INTO specification (pages_specification, isbn_specification, eisbn_specification, size_specification, paper_specification)
+VALUES (0, 0, 0, 0, 0);
+SET @id_specification=LAST_INSERT_ID();
+
+INSERT INTO production (description_production)
+VALUES (0);
+SET @id_production=LAST_INSERT_ID();
+
+INSERT INTO books (order_books, title_books, price_books, total_books, amount_books, estimation_books, id_completeness, id_cover, id_specification, id_production, show_books)
+VALUES (?, ?, ?, ?, ?, ?, @id_completeness, @id_cover, @id_specification, @id_production, ?)';
 
             $row = $dbdata->prepare($books_sql);
             $row->execute($create_books);
@@ -49,7 +57,7 @@ VALUES (?, ?,?, ?, ?, ?, @id_completeness, @id_cover, ?)';
         }
     }
 
- ?>
+?>
 
     <form method="POST" action="">
         <input type="number" name="order_books" placeholder="Nomer Order" required><br>
@@ -62,7 +70,7 @@ VALUES (?, ?,?, ?, ?, ?, @id_completeness, @id_cover, ?)';
         <input type="submit" name="tambah_order" value="tambah order" />
     </form><br>
 
-  
+
 
 <?php } else {
     include '../src/function/notfoundpage.php';

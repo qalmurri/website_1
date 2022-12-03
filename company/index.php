@@ -28,54 +28,13 @@ if (!empty($_SESSION['token_login'])) {
         $footer = $setting['footer'];
 
         if ($_SESSION['id_section'] == "1") {
-            if ($member['id_part'] == "1") {
-                include "../src/include/header/$header.php";
-
-                if (!empty($_GET['page'])) {
-                    include 'web/page/' . $_GET['page'] . '/index.php';
-                } else {
-                    include "../src/include/home/$home.php";
-                }
-                include "../src/include/footer/$footer.php";
-            } else if ($member['id_part'] == "2") {
-                include "../src/include/header/$header.php";
-
-                if (!empty($_GET['page'])) {
-                    include 'web/page/' . $_GET['page'] . '/index.php';
-                } else {
-                    include "../src/include/home/$home.php";
-                }
-                include "../src/include/footer/$footer.php";
-            } else if ($member['id_part'] == "3") {
-                include "../src/include/header/$header.php";
-
-                if (!empty($_GET['page'])) {
-                    include 'web/page/' . $_GET['page'] . '/index.php';
-                } else {
-                    include "../src/include/home/$home.php";
-                }
-                include "../src/include/footer/$footer.php";
-            } else if ($member['id_part'] == "4") {
-                include "../src/include/header/$header.php";
-
-                if (!empty($_GET['page'])) {
-                    include 'web/page/' . $_GET['page'] . '/index.php';
-                } else {
-                    include "../src/include/home/$home.php";
-                }
-                include "../src/include/footer/$footer.php";
-            } else if ($member['id_part'] == "6") {
-                include "../src/include/header/$header.php";
-
-                if (!empty($_GET['page'])) {
-                    include 'web/page/' . $_GET['page'] . '/index.php';
-                } else {
-                    include "../src/include/home/$home.php";
-                }
-                include "../src/include/footer/$footer.php";
+            include "../src/include/header/$header.php";
+            if (!empty($_GET['page'])) {
+                include 'web/page/' . $_GET['page'] . '/index.php';
             } else {
-                echo '<script>window.location="../index.php";</script>';
+                include "../src/include/home/$home.php";
             }
+            include "../src/include/footer/$footer.php";
         } else {
             session_destroy();
             echo '<script>alert("Section Salah");window.location="../index.php";</script>';
