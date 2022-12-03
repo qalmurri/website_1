@@ -11,7 +11,7 @@
                                                             $hasil = $user->author_book($book['id_books']);
                                                             foreach ($hasil as $author) { ?> <a href="?page=author/detail&author=<?php echo $author['id_member'] ?>" title="<?php echo $author['name_member'] ?>"><?php echo $author['name_member'] ?>, </a> <?php } ?> </p>
                     </div>
-                    <h1 title="<?php echo $book['title_books']; ?>"><a class="super"><?php echo $book['order_books']; ?> </a><a href="www.google.com"><?php echo $book['title_books']; ?></a></h1>
+                    <h1 title="<?php echo $book['title_books']; ?>"><a class="super"><?php echo $book['order_books']; ?> </a><a href="?page=books/detail&book=<?php echo $book['id_books']; ?>"><?php echo $book['title_books']; ?></a></h1>
                     <hr>
                     <table class="info-content">
                         <tr>
