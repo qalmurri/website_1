@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2022 at 12:16 PM
+-- Generation Time: Dec 03, 2022 at 06:28 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -38,54 +38,11 @@ CREATE TABLE `author` (
 --
 
 INSERT INTO `author` (`id_category`, `id_books`, `id_member`) VALUES
-(43, 84, 23),
-(44, 84, 23),
-(45, 84, 19),
-(46, 84, 22),
-(47, 84, 23),
-(48, 84, 25),
-(49, 86, 24),
-(50, 86, 16),
-(51, 86, 25),
-(52, 86, 25),
-(53, 86, 25),
-(54, 86, 24),
-(55, 86, 16),
-(56, 86, 23),
-(57, 86, 18),
-(58, 86, 26),
-(59, 86, 21),
-(60, 86, 20),
-(61, 86, 22),
-(62, 86, 19),
-(63, 86, 17),
-(64, 85, 17),
-(65, 85, 25),
-(66, 85, 16),
-(67, 85, 24),
-(68, 93, 25),
-(69, 91, 25),
-(70, 91, 24),
-(71, 91, 16),
-(72, 91, 23),
-(73, 91, 18),
-(74, 91, 26),
-(75, 91, 21),
-(76, 91, 20),
-(77, 91, 22),
-(78, 91, 19),
-(79, 91, 17),
-(80, 92, 25),
-(81, 92, 24),
-(82, 92, 16),
-(83, 92, 23),
-(84, 92, 18),
-(85, 92, 26),
-(86, 92, 21),
-(87, 92, 20),
-(88, 92, 22),
-(89, 92, 19),
-(90, 92, 17);
+(265, 104, 40),
+(266, 104, 39),
+(267, 105, 42),
+(268, 105, 41),
+(269, 105, 39);
 
 --
 -- Indexes for dumped tables
@@ -105,7 +62,7 @@ ALTER TABLE `author`
 -- AUTO_INCREMENT for table `author`
 --
 ALTER TABLE `author`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=270;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

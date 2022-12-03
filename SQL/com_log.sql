@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2022 at 12:16 PM
+-- Generation Time: Dec 03, 2022 at 06:28 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -85,40 +85,15 @@ CREATE TABLE `log` (
 --
 
 INSERT INTO `log` (`id_log`, `id_member`, `id_crud`, `id_action`, `id_target`, `note_log`, `date_log`) VALUES
-(326, 3, 1, 4, 85, 'Bunga Rampai', '2022-11-26 09:06:00'),
-(327, 3, 1, 5, 15, 'Pak Baru', '2022-11-26 09:06:05'),
-(328, 3, 1, 3, NULL, '1669491910', '2022-11-27 02:45:10'),
-(329, 3, 1, 4, 86, 'Hukum Rimba', '2022-11-27 02:46:01'),
-(330, 3, 1, 4, 87, 'Perjuangan Sesaat', '2022-11-27 02:46:25'),
-(331, 3, 1, 3, NULL, '1669491910', '2022-11-27 02:56:48'),
-(332, 3, 1, 3, NULL, '1669492651', '2022-11-27 02:57:31'),
-(333, 3, 1, 3, NULL, '1669492651', '2022-11-27 02:59:17'),
-(334, 2, 1, 3, NULL, '1669492766', '2022-11-27 02:59:26'),
-(335, 2, 1, 3, NULL, '1669492766', '2022-11-27 03:00:44'),
-(336, 3, 1, 3, NULL, '1669492850', '2022-11-27 03:00:50'),
-(337, 3, 1, 3, NULL, '1669492850', '2022-11-27 03:02:51'),
-(338, 3, 1, 3, NULL, '1669492998', '2022-11-27 03:03:18'),
-(339, 3, 1, 3, NULL, '1669520057', '2022-11-27 10:34:17'),
-(340, 3, 1, 5, 16, 'Pak Sarjono', '2022-11-27 10:41:10'),
-(341, 3, 1, 5, 17, 'pak lek', '2022-11-27 10:41:14'),
-(342, 3, 1, 5, 18, 'pak kintil', '2022-11-27 10:41:31'),
-(343, 3, 1, 5, 19, '123123', '2022-11-27 10:41:35'),
-(344, 3, 1, 5, 20, 'Pak Sarjono', '2022-11-27 10:41:37'),
-(345, 3, 1, 5, 21, 'pak sarjono', '2022-11-27 10:41:42'),
-(346, 3, 1, 5, 22, 'a', '2022-11-27 10:41:52'),
-(347, 3, 1, 5, 23, 'b', '2022-11-27 10:41:56'),
-(348, 3, 1, 5, 24, 'c', '2022-11-27 10:41:59'),
-(349, 3, 1, 5, 25, 'e', '2022-11-27 10:42:02'),
-(350, 3, 1, 5, 26, 'd', '2022-11-27 10:42:04'),
-(351, 3, 1, 4, 88, 'Halusinasi', '2022-11-27 14:53:39'),
-(352, 3, 1, 4, 89, 'Bunga Rampai', '2022-11-27 14:57:45'),
-(353, 3, 1, 4, 90, 'Bunga Rampai', '2022-11-27 14:58:32'),
-(354, 3, 1, 4, 91, 'Bunga Rampai6', '2022-11-27 15:01:27'),
-(355, 3, 1, 4, 92, 'Bunga Rampai7', '2022-11-27 15:01:36'),
-(356, 3, 1, 4, 93, 'Bunga Rampai', '2022-11-27 15:02:01'),
-(357, 3, 1, 4, 94, 'Bunga Rampai2', '2022-11-27 15:02:20'),
-(358, 3, 1, 4, 95, 'Bunga Rampai3', '2022-11-27 15:02:28'),
-(359, 3, 1, 3, NULL, '1669520057', '2022-11-27 15:09:06');
+(401, 2, 1, 3, NULL, '1670039755', '2022-12-03 11:20:32'),
+(402, 3, 1, 3, NULL, '1670041236', '2022-12-03 11:20:36'),
+(403, 3, 1, 4, 106, 'Desain Pembelajaran Gaming Berbasis Learning Progression: Meningkatkan Pedagogical Content Knowledge Guru melalui Pembelajaran yang Bermakna dan Menyenangkan', '2022-12-03 11:22:38'),
+(404, 3, 1, 5, 40, 'Murni Ramli', '2022-12-03 11:22:53'),
+(405, 3, 1, 4, 107, 'Manajemen Perubahan dan Resolusi Konflik: Studi kasus dalam Pembangunan Objek Wisata di Pedesaan', '2022-12-03 11:32:36'),
+(406, 3, 1, 5, 41, 'Suwarto', '2022-12-03 11:32:55'),
+(407, 3, 1, 5, 42, 'Agung Wibowo', '2022-12-03 11:33:07'),
+(408, 3, 3, 3, NULL, '3_maxresdefault.jpg', '2022-12-03 11:35:23'),
+(409, 3, 1, 4, 108, 'Testing', '2022-12-03 12:00:56');
 
 --
 -- Indexes for dumped tables
@@ -162,7 +137,7 @@ ALTER TABLE `crud`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=360;
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=410;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
