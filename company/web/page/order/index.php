@@ -38,7 +38,7 @@ INSERT INTO specification (pages_specification, isbn_specification, eisbn_specif
 VALUES (0, 0, 0, 0, 0);
 SET @id_specification=LAST_INSERT_ID();
 
-INSERT INTO production (description_production)
+INSERT INTO production (process_production)
 VALUES (0);
 SET @id_production=LAST_INSERT_ID();
 
