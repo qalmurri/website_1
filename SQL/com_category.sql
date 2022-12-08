@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2022 at 06:28 AM
+-- Generation Time: Dec 08, 2022 at 01:21 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -42,7 +42,22 @@ INSERT INTO `author` (`id_category`, `id_books`, `id_member`) VALUES
 (266, 104, 39),
 (267, 105, 42),
 (268, 105, 41),
-(269, 105, 39);
+(269, 105, 39),
+(270, 106, 39),
+(271, 106, 42),
+(272, 106, 30),
+(273, 106, 35),
+(274, 106, 37),
+(275, 106, 32),
+(276, 106, 34),
+(277, 106, 40),
+(278, 106, 38),
+(279, 106, 33),
+(280, 106, 41),
+(281, 106, 31),
+(282, 106, 36),
+(283, 108, 42),
+(284, 108, 39);
 
 --
 -- Indexes for dumped tables
@@ -62,7 +77,7 @@ ALTER TABLE `author`
 -- AUTO_INCREMENT for table `author`
 --
 ALTER TABLE `author`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=270;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=285;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
